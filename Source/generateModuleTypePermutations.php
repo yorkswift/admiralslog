@@ -2,11 +2,11 @@
 
 $module_colours = [
 
-    'yellow'=> "#232344",
-    'green'=> "#232344",
-    'purple'=> "#232344",
-    'blue'=>'#342342',
-    'orange'=>'#342342'
+    'yellow'=> '#fdd97a',
+    'green'=> '#9dcb8c',
+    'purple'=> '#a088b8',
+    'blue'=>'#a5ddec',
+    'orange'=>'#f47f52'
 
 ];
 
@@ -22,15 +22,15 @@ $module_types = [
     ],
     'E'=>[
         'name'=>'Education',
-        'colour'=>'green'
+        'colour'=>'purple'
     ],
     'I'=> [
         'name'=>'Infrastructure',
-        'colour'=>'green'
+        'colour'=>'blue'
     ],
     'R'=> [
         'name'=>'Recreation',
-        'colour'=>'green'
+        'colour'=>'orange'
     ],
 
 ];
