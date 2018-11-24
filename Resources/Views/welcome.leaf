@@ -1,8 +1,8 @@
-#set("title") { It works }
+#set("title") { Admiral's Log }
 
 #set("body") {
 	<div class="welcome">
-		<img src="/images/it-works.png">
+		hello
 	</div>
 }
 
