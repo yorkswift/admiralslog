@@ -1,5 +1,7 @@
 <?php
 
+//php ./Source/generateModuleTypePermutations.php
+
 $module_colours = [
 
     'yellow' => '#fdd97a',
