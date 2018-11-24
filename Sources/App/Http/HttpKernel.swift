@@ -14,6 +14,9 @@ class HttpKernel {
         
         let homeController = HomeController()
         try routes.register(collection: homeController)
+
+        let moduleController = ModuleController()
+        try routes.register(collection: moduleController)
         
     }
 

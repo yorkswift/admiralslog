@@ -2,6 +2,7 @@
 import Vapor
 
 class HomeController : RouteCollection {
+    
     func boot(router: Router) throws {
         
         router.get(use: getHomeHandler)
