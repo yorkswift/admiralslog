@@ -17,3 +17,11 @@ div.welcome img {
   	transform: translateY(-50%);
 	width: 300px;
 }
+
+.lab__background {
+	background: url(../images/computerlab_background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
