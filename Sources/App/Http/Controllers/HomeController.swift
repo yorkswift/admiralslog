@@ -10,8 +10,10 @@ class HomeController : RouteCollection {
     }
         
     func getHomeHandler(_ req: Request) throws -> Future<View> {
-         
-         return try req.view().render("welcome")
+        
+        let station = SpaceStation()
+        //
+        return try req.view().render("welcome",['tint','blue'] )
 
     }
     

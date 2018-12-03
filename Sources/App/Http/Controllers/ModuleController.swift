@@ -1,18 +1,25 @@
 
 import Vapor
 
+//struct ScalableVectorGraphic : View {
+//
+//}
+
 class ModuleController : RouteCollection {
+    
+   
     
     func boot(router: Router) throws {
         
         let moduleImageRoutes = router.grouped("modules")
-        moduleImageRoutes.get("centre",use: getCentreModuleImageHandler)
+        moduleImageRoutes.get("centre.svg",use: getCentreModuleImageHandler)
       
     }
         
     func getCentreModuleImageHandler(_ req: Request) throws -> Future<View> {
-         
-         return try req.view().render("Modules/Centre", ["tint": "cyan"])
+        let view = try req.view()
+    
+        return view.render("Modules/Centre", ["tint": "cyan"])
 
     }
     

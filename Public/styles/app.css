@@ -6,16 +6,13 @@ body {
 	font-family: sans-serif;
 }
 
-div.welcome {
-	height: 100%;
-	text-align: center;
+div.modules {
+	height: 500px;
+    width: 500px;
 }
 
-div.welcome img {
-	position: relative;
-  	top: 50%;
-  	transform: translateY(-50%);
-	width: 300px;
+div.modules svg {
+    width: 100%;
 }
 
 .lab__background {

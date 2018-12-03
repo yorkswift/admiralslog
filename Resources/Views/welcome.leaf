@@ -1,9 +1,32 @@
 #set("title") { Admiral's Log }
 
 #set("body") {
-	<div class="welcome">
-		hello
+	<div class="modules">
+
+        #for(module in station) {
+
+        <div class="#(module.type)">
+            #(module.type)
+        </div>
+
+    }
+        <div class="top">
+		    #embed("Modules/Top")
+        </div>
+        <div class="left">
+            #embed("Modules/Left")
+        </div>
+        <div class="centre">
+            #embed("Modules/Centre")
+        </div>
+        <div class="right">
+            #embed("Modules/Right")
+        </div>
+        <div class="bottom">
+            #embed("Modules/Bottom")
+        </div>
 	</div>
+
 }
 
 #embed("base")
