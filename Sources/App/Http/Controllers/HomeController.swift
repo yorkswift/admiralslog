@@ -13,7 +13,9 @@ class HomeController : RouteCollection {
         
         let station = SpaceStation()
         //
-        return try req.view().render("welcome",['tint','blue'] )
+        return try req.view().render("welcome")
+
+        //['tint','blue']
 
     }
     

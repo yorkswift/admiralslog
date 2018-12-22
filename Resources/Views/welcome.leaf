@@ -1,6 +1,12 @@
 #set("title") { Admiral's Log }
 
 #set("body") {
+
+<video class="lab__video" poster="./images/computerlab_background.png" id="bgvid" playsinline autoplay muted>
+<source src="./media/intro.mp4" type="video/mp4">
+
+</video>
+
 	<div class="modules">
 
         #for(module in station) {
@@ -9,7 +15,7 @@
             #(module.type)
         </div>
 
-    }
+        }
         <div class="top">
 		    #embed("Modules/Top")
         </div>
