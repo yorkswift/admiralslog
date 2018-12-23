@@ -9,10 +9,10 @@
 
 	<div class="modules">
 
-        #for(module in station) {
+        #for(module in station.modules) {
 
-        <div class="#(module.type)">
-            #(module.type)
+        <div class="#(module.moduleType)">
+            #(module.moduleType)
         </div>
 
         }

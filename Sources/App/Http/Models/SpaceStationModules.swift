@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum ModuleType : String, CaseIterable {
+enum ModuleType : String, CaseIterable, Codable {
     case Top
     case Left
     case Centre
@@ -9,12 +9,20 @@ enum ModuleType : String, CaseIterable {
     case Bottom
 }
 
-struct SpaceStationModule {
+struct SpaceStationModule  {
    var moduleType : ModuleType
-   var category : ModuleCategory?
+   //var category : ModuleCategory?
     
     init(_ type: ModuleType) {
         moduleType = type
     }
     
+}
+
+extension SpaceStationModule: Encodable {
+    enum CodingKeys: String, CodingKey { case moduleType }
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(moduleType, forKey: .moduleType)
+    }
 }
