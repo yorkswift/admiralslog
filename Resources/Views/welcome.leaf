@@ -11,26 +11,12 @@
 
         #for(module in station.modules) {
 
-        <div class="#(module.moduleType)">
-            #(module.moduleType)
-        </div>
+            <div class="#(lowercase(module.moduleType))">
+                #embed(module.moduleTypeTemplate)
+            </div>
 
         }
-        <div class="top">
-		    #embed("Modules/Top")
-        </div>
-        <div class="left">
-            #embed("Modules/Left")
-        </div>
-        <div class="centre">
-            #embed("Modules/Centre")
-        </div>
-        <div class="right">
-            #embed("Modules/Right")
-        </div>
-        <div class="bottom">
-            #embed("Modules/Bottom")
-        </div>
+
 	</div>
 
 }
