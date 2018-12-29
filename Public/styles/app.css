@@ -35,3 +35,8 @@ div.modules svg {
     transform: translateX(-50%) translateY(-50%);
     transition: 1s opacity;
 }
+
+.modules {
+    color: #ffffff;
+    width: 50%;
+}

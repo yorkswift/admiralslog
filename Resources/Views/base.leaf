@@ -3,6 +3,7 @@
 <head>
 	<title>#get(title)</title>
 	<link rel="stylesheet" href="/styles/app.css">
+    #get(headerExtra)
 </head>
 <body class="lab__background">
     #get(body)

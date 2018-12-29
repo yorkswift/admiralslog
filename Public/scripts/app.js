@@ -1,0 +1,6 @@
+
+introEnded = function(){
+    
+    $('.modules').show();
+
+}

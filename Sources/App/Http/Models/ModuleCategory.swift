@@ -29,3 +29,15 @@ enum ModuleCategory : String, CaseIterable {
         }
     }
 }
+
+extension ModuleCategory: Encodable {
+    enum CodingKeys: String, CodingKey {
+        case name,initial, colourHex
+    }
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.rawValue.uppercased(), forKey: .name)
+        try container.encode(initial, forKey: .initial)
+        try container.encode(colourHex, forKey: .colourHex)
+    }
+}

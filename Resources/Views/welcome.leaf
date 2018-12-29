@@ -1,13 +1,22 @@
 #set("title") { Admiral's Log }
 
+#set("headerExtra"){
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="./scripts/app.js"></script>
+}
+
 #set("body") {
 
-<video class="lab__video" poster="./images/computerlab_background.png" id="bgvid" playsinline autoplay muted>
+<video class="lab__video" poster="./images/computerlab_background.png" id="bgvid" playsinline autoplay muted onended="introEnded();" >
 <source src="./media/intro.mp4" type="video/mp4">
 
 </video>
 
-	<div class="modules">
+
+<form class="modules" style="display:none;">
+    <fieldset>
+        <legend>Please input module categories:</legend>
 
         #for(module in station.modules) {
 
@@ -16,8 +25,16 @@
             </div>
 
         }
-
-	</div>
+    </fieldset>
+    <div class="modules__legend">
+        <dl>
+            #for(category in station.categories) {
+                <dt>#(category.name)</dt>
+                <dd>#(category.initial)</dd>
+                }
+        </dl>
+    <div>
+	</form>
 
 }
 
