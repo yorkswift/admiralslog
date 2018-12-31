@@ -5,6 +5,14 @@ import Vapor
 public func configure(_ config: inout Config, _ env: inout Environment, _ services: inout Services) throws {
     /// Register providers first
     try services.register(LeafProvider())
+    
+    //custom tags
+    
+    services.register { container -> LeafTagConfig in
+        var config = LeafTagConfig.default()
+        config.use(CreateAnchorTag(), as: "createAnchor")
+        return config
+    }
 
     let http = try HttpKernel()
     services.register(http.routes, as: Router.self)

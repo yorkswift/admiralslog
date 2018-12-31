@@ -41,3 +41,13 @@ extension ModuleCategory: Encodable {
         try container.encode(colourHex, forKey: .colourHex)
     }
 }
+
+//extension ModuleCategory: Decodable {
+//    
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//    }
+//    
+//    self.init()
+//}
+

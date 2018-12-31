@@ -8,16 +8,18 @@
 
 #set("body") {
 
+#/*
 <video class="lab__video" poster="./images/computerlab_background.png" id="bgvid" playsinline autoplay muted onended="introEnded();" >
 <source src="./media/intro.mp4" type="video/mp4">
+*/
 
 </video>
 
-
-<form class="modules" style="display:none;">
+<h2 style="display:none;">Spacestation Modules</h2>
+<form class="modules" style="display:block;" method="GET" action="./">
     <fieldset>
         <legend>Please input module categories:</legend>
-
+#/*
         #for(module in station.modules) {
 
             <div class="#(lowercase(module.moduleType))">
@@ -25,8 +27,31 @@
             </div>
 
         }
+*/
+
+    #for(module in station.modules) {
+
+    <p>#(module.moduleType)</p>
+
+    #if(module.moduleType != "Centre"){
+
+        #for(category in station.categories) {
+
+            <div>
+
+                <input type="radio" id="#(category.name)" name="#(module.moduleInitial)" value="#(category.initial)">
+                <label for="#(category.name)">#(category.name)</label>
+            </div>
+
+        }
+    }
+
+}
+
+
     </fieldset>
     <div class="modules__legend">
+        <h2>KEY</h2>
         <dl>
             #for(category in station.categories) {
                 <dt>#(category.name)</dt>
@@ -34,6 +59,7 @@
                 }
         </dl>
     <div>
+    <input type="submit" value="Start" />
 	</form>
 
 }

@@ -5,11 +5,11 @@ struct SpaceStation {
     
     let modules : [SpaceStationModule] =
         [
-            SpaceStationModule(.Top),
-            SpaceStationModule(.Left),
+            SpaceStationModule(.QuadrantI),
+            SpaceStationModule(.QuadrantII),
             SpaceStationModule(.Centre),
-            SpaceStationModule(.Right),
-            SpaceStationModule(.Bottom)
+            SpaceStationModule(.QuadrantIII),
+            SpaceStationModule(.QuadrantIV)
         ]
     
      let categories : [ModuleCategory] = [.accomodation,.defence,.education,.infrastructure,.recreation]
