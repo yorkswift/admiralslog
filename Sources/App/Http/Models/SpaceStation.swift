@@ -6,10 +6,10 @@ struct SpaceStation {
     let modules : [SpaceStationModule] =
         [
             SpaceStationModule(.QuadrantI, category: .accomodation),
-            SpaceStationModule(.QuadrantII),
+            SpaceStationModule(.QuadrantII, category: .defence),
             SpaceStationModule(.Centre),
-            SpaceStationModule(.QuadrantIII),
-            SpaceStationModule(.QuadrantIV)
+            SpaceStationModule(.QuadrantIII, category: .infrastructure),
+            SpaceStationModule(.QuadrantIV, category: .education),
         ]
     
      let categories : [ModuleCategory] = [.accomodation,.defence,.education,.infrastructure,.recreation]
