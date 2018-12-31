@@ -45,36 +45,8 @@ div.modules svg {
 .selector {
     position: absolute;
     width: 66%;
+}
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.selector__module {
-    width: 50%;
-    /* position: absolute; */
-}
-.selector__module svg {
+.selector svg {
     width: 100%;
-}
-
-.selector__module.quadrantii {
-
-}
-
-.selector__module.quadrantii {
-    
-}
-
-.selector__module.quadrantiii {
-   
-}
-
-.selector__module.quadrantiv {
-  
-}
-
-.selector__module.centre {
-    display: none;
 }

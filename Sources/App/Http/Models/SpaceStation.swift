@@ -5,7 +5,7 @@ struct SpaceStation {
     
     let modules : [SpaceStationModule] =
         [
-            SpaceStationModule(.QuadrantI),
+            SpaceStationModule(.QuadrantI, category: .accomodation),
             SpaceStationModule(.QuadrantII),
             SpaceStationModule(.Centre),
             SpaceStationModule(.QuadrantIII),
