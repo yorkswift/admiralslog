@@ -8,21 +8,22 @@
 
 #set("body") {
 
-#/*
-<video class="lab__video" poster="./images/computerlab_background.png" id="bgvid" playsinline autoplay muted onended="introEnded();" >
-<source src="./media/intro.mp4" type="video/mp4">
-*/
+
+<video class="lab__video" id="bgvid" playsinline autoplay muted onended="introEnded();" >
+<source src="./media/intro3.mp4" type="video/mp4">
+
 
 </video>
 
 <h2 style="display:none;">Spacestation Modules</h2>
-<form class="modules" style="display:block;" method="GET" action="./">
-    <fieldset>
-        <legend>Please input module categories:</legend>
+<div class="padding-medium">
+<form class="modules hidden" method="GET" action="./">
+    <div class="modules__selector__wrapper">
+    <fieldset class="reset-fieldset modules__selector">
+        <legend class="inverted__text">PLEASE INPUT MODULE CATEGORIES:</legend>
 
-        <div class="selector">
-
-        <svg width="974px" height="726px" viewBox="0 0 974 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div class="padding-large">
+        <svg width="100%" height="100%" viewBox="0 0 974 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="selection_screen_03" transform="translate(-86.000000, -210.000000)">
                 <g id="spacestation" transform="translate(86.000000, 209.000000)">
@@ -37,14 +38,13 @@
             </g>
         </g>
         </svg>
-
-        </div>
+        <div>
 
     #for(module in station.modules) {
 
-    <p>#(module.moduleType)</p>
-
     #if(module.moduleType != "Centre"){
+
+        <p>#(module.moduleType)</p>
 
         #for(category in station.categories) {
 
@@ -61,18 +61,25 @@
 
 
     </fieldset>
-    <div class="modules__legend">
-        <h2>KEY</h2>
+    </div>
+ <div class="modules__legend_wrapper">
+<fieldset class="reset-fieldset modules__legend">
+
+        <h2 class="inverted__text">KEY</h2>
         <dl>
             #for(category in station.categories) {
-                <dt>#(category.name)</dt>
-                <dd>#(category.initial)</dd>
+<dt style="
+    color:#(category.colourHex);
+    border-color:#(category.colourHex);
+">#(category.name)</dt><dd>#(category.initial)</dd>
                 }
         </dl>
     <div>
-    <input type="submit" value="Start" />
+    <input class="modules__start" type="submit" value="START" />
+    </fieldset>
+</div>
 	</form>
-
+</div>
 }
 
 #embed("base")
