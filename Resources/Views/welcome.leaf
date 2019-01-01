@@ -23,47 +23,42 @@
         <legend class="inverted__text">PLEASE INPUT MODULE CATEGORIES:</legend>
 
         <div class="padding-large">
-        <svg width="100%" height="100%" viewBox="0 0 974 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="selection_screen_03" transform="translate(-86.000000, -210.000000)">
-                <g id="spacestation" transform="translate(86.000000, 209.000000)">
 
-                    #for(module in station.modules) {
+         #embed("Modules/ModuleHeader")
 
-                        #embed(module.moduleTypeTemplate)
+            #for(module in station.modules) {
 
-                    }
+                #embed(module.moduleTypeTemplate)
 
-                </g>
-            </g>
-        </g>
-        </svg>
+            }
+
+         #embed("Modules/ModuleFooter")
+               
         <div>
 
     #for(module in station.modules) {
 
-    #if(module.moduleType != "Centre"){
+        #if(module.moduleType != "Centre"){
 
-        <p>#(module.moduleType)</p>
+            <p>#(module.moduleType)</p>
 
-        #for(category in station.categories) {
+            #for(category in station.categories) {
 
-            <div>
+                <div>
+                    <input type="radio" id="#(category.name)" name="#(module.moduleInitial)" value="#(category.initial)">
+                    <label for="#(category.name)">#(category.name)</label>
+                </div>
 
-                <input type="radio" id="#(category.name)" name="#(module.moduleInitial)" value="#(category.initial)">
-                <label for="#(category.name)">#(category.name)</label>
-            </div>
-
+            }
         }
+
     }
-
-}
-
 
     </fieldset>
     </div>
+
  <div class="modules__legend_wrapper">
-<fieldset class="reset-fieldset modules__legend">
+    <fieldset class="reset-fieldset modules__legend">
 
         <h2 class="inverted__text">KEY</h2>
         <dl>

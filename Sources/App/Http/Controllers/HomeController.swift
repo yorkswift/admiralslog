@@ -1,15 +1,6 @@
 
 import Vapor
 
-
-//struct SpaceStationConfiguration: Content {
-//    var T : ModuleCategory?
-//    var L : ModuleCategory?
-//    var R : ModuleCategory?
-//    var B : ModuleCategory?
-//}
-
-
 class HomeController : RouteCollection {
     
     func boot(router: Router) throws {
@@ -20,9 +11,9 @@ class HomeController : RouteCollection {
         
     func getHomeHandler(_ req: Request) throws -> Future<View> {
         
-//        let station = req.query.decode(SpaceStation.self)
-        
-        let station = SpaceStation()
+       let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
+
+        let station = SpaceStation(stationConfig)
     
         let view = try req.view()
         

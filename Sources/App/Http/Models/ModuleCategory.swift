@@ -28,11 +28,22 @@ enum ModuleCategory : String, CaseIterable {
         case .recreation : return "R"
         }
     }
+    
+    init(initial: String) {
+        switch initial {
+            case "A": self = .accomodation
+            case "D": self = .defence
+            case "E": self = .education
+            case "I": self = .infrastructure
+            case "R": self = .recreation
+            default: self = .accomodation
+        }
+    }
 }
 
 extension ModuleCategory: Encodable {
     enum CodingKeys: String, CodingKey {
-        case name,initial, colourHex
+        case name, initial, colourHex
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -42,12 +53,24 @@ extension ModuleCategory: Encodable {
     }
 }
 
-//extension ModuleCategory: Decodable {
-//    
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//    }
-//    
-//    self.init()
-//}
+extension ModuleCategory: Decodable {
+    
+    init(from decoder: Decoder) throws {
+        
+       let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        
+        if rawValue.isEmpty {
+            throw DecodingError.dataCorruptedError(
+                in: container,
+                debugDescription: "Cannot initialize ModuleCategory from an empty string"
+            )
+        }
+        
+       self.init(initial: rawValue)
+    
+    }
+    
+  
+}
 
