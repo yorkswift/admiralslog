@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: #000;
 }
 
 body,h2,input {
@@ -39,7 +40,7 @@ body,h2,input {
 .modules {
     color: #ffffff;
     width: 74%;
-    display: flex;
+    display: block;
 }
 
 
@@ -90,7 +91,7 @@ body,h2,input {
 }
 
 .modules__selector__wrapper {
-    width: 66%;
+    width: 100%;
     border: 1px #fff solid;
 }
 
@@ -106,8 +107,7 @@ body,h2,input {
 }
 
 .modules__legend_wrapper {
-    width: 33%;
-    padding: 0 0 2em 2em;
+    width: 100%;
 }
 
 .padding-medium {
@@ -121,3 +121,17 @@ body,h2,input {
 .hidden {
     /* display: none; */
 }
+
+@media only screen and (min-width: 1024px) {
+
+    .modules {
+        display: flex;
+    }
+    .modules__selector__wrapper {
+        width: 66%;
+    }
+    .modules__legend_wrapper {
+        width: 33%;
+        padding: 0 0 2em 2em;
+    }
+  }
