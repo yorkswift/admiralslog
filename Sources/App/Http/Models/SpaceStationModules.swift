@@ -32,7 +32,7 @@ struct SpaceStationModule {
     var colourHex : String {
         
         guard let colourHex = moduleCategory?.colourHex else {
-            return "blue"
+            return "#ffffff"
         }
         
         return colourHex
