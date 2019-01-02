@@ -40,12 +40,13 @@
 
         #if(module.moduleType != "Centre"){
 
-            <p>#(module.moduleType)</p>
+            <p>#(module.moduleType) - #(module.categoryInitial)</p>
 
             #for(category in station.categories) {
 
                 <div>
-                    <input type="radio" id="#(category.name)" name="#(module.moduleInitial)" value="#(category.initial)">
+
+<input type="radio" id="#(category.name)" name="#(module.moduleInitial)" value="#(category.initial)" #if(category.initial == module.categoryInitial){ checked="checked"}>
                     <label for="#(category.name)">#(category.name)</label>
                 </div>
 

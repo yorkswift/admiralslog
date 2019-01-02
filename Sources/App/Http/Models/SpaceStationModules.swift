@@ -51,13 +51,21 @@ struct SpaceStationModule {
 }
 
 extension SpaceStationModule: Encodable {
-    enum CodingKeys: String, CodingKey { case moduleType,moduleInitial, moduleTypeTemplate, colourHex }
+    enum CodingKeys: String, CodingKey {
+        case moduleType
+        case moduleInitial
+        case moduleTypeTemplate
+        case colourHex
+        case categoryInitial
+    }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
         try container.encode(moduleType, forKey: .moduleType)
         try container.encode(moduleType.initial, forKey: .moduleInitial)
-        try container.encode(colourHex, forKey: .colourHex)
         try container.encode("Modules/" + moduleType.rawValue, forKey: .moduleTypeTemplate)
+        
+        try container.encode(colourHex, forKey: .colourHex)
+        try container.encode(moduleCategory?.initial, forKey: .categoryInitial)
     }
 }
