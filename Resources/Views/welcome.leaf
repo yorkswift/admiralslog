@@ -34,28 +34,30 @@
 
          #embed("Modules/ModuleFooter")
                
-        <div>
+        </div>
+      </fieldset>
 
+    <div class="modules__inputs">
     #for(module in station.modules) {
 
         #if(module.moduleType != "Centre"){
-
-            <p>#(module.moduleType) - #(module.categoryInitial)</p>
+        <fieldset class="">
+        <legend>#(module.moduleType)</legend>
 
             #for(category in station.categories) {
 
-                <div>
-
-<input type="radio" id="#(category.name)" name="#(module.moduleInitial)" value="#(category.initial)" #if(category.initial == module.categoryInitial){ checked="checked"}>
+<input type="radio" id="#(module.moduleInitial)_#(category.initial)" name="#(module.moduleInitial)" value="#(category.initial)" #if(category.initial == module.categoryInitial){ checked="checked"}>
                     <label for="#(category.name)">#(category.name)</label>
-                </div>
 
             }
+ </fieldset>
+
         }
 
     }
+</div>
 
-    </fieldset>
+
     </div>
 
  <div class="modules__legend_wrapper">

@@ -119,6 +119,14 @@ body,h2,input {
     /* display: none; */
 }
 
+.modules__inputs {
+    padding:3em;
+}
+
+.modules__inputs fieldset {
+    border: 1px solid #fff;
+}
+
 @media only screen and (min-width: 1024px) {
 
     .modules {

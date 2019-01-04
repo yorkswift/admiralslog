@@ -34,16 +34,48 @@ struct SpaceStation {
             SpaceStationModule(.QuadrantIV, category: .education),
             ]
     }
+    
+    var configurationUrls : [[String : [String]]] {
+        
+       let urls = modules.compactMap {
+        module -> [String : [String]]? in
+        
+       if module.moduleType == .Centre { return nil }
+        
+        var urls = [String: [String] ]()
+        
+        urls[module.moduleType.initial] = categories.map({
+            
+             category in
+            
+//            if category == module.moduleCategory {
+//
+//            }
+            
+            return category.initial
+            
+        })
+        return urls
+        
+        }
+        
+        return urls
+    }
+
 }
 
 extension SpaceStation: Encodable {
     enum CodingKeys: String, CodingKey {
         case modules
         case categories
+        case urls
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(modules, forKey: .modules)
         try container.encode(categories, forKey: .categories)
+        try container.encode(configurationUrls, forKey: .urls)
     }
+    
+    
 }

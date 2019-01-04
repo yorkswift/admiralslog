@@ -12,8 +12,10 @@ class HomeController : RouteCollection {
     func getHomeHandler(_ req: Request) throws -> Future<View> {
         
        let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
-
+        
         let station = SpaceStation(stationConfig)
+        
+        //print(station.configurationUrls)
     
         let view = try req.view()
         
