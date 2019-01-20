@@ -2,7 +2,6 @@
 introEnded = function(){
     
     $('.modules').show();
-
    
 }
 

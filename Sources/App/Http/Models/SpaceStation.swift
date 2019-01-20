@@ -2,21 +2,17 @@
 import Vapor
 import Foundation
 
-struct SpaceStationConfiguration: Content {
-    var QI : ModuleCategory?
-    var QII : ModuleCategory?
-    var QIII : ModuleCategory?
-    var QIV : ModuleCategory?
-}
-
 struct SpaceStation {
     
     let modules : [SpaceStationModule]
-    
+    let config : SpaceStationConfiguration
     let categories : [ModuleCategory] = [.accomodation,.defence,.education,.infrastructure,.recreation]
     
     init(_ config : SpaceStationConfiguration) {
-        modules = [
+        
+        self.config = config
+        
+        self.modules = [
             SpaceStationModule(.QuadrantI, category: config.QI),
             SpaceStationModule(.QuadrantII, category: config.QII),
             SpaceStationModule(.Centre),
@@ -25,41 +21,25 @@ struct SpaceStation {
         ]
     }
     
-    init() {
-       modules = [
-            SpaceStationModule(.QuadrantI, category: .accomodation),
-            SpaceStationModule(.QuadrantII, category: .defence),
-            SpaceStationModule(.Centre),
-            SpaceStationModule(.QuadrantIII, category: .infrastructure),
-            SpaceStationModule(.QuadrantIV, category: .education),
-            ]
+    let totalRequiredModules = 4
+    
+    var isComplete : Bool {
+        
+        let modulesCompletedCount = modules.reduce(0, {
+            count , module in
+            if module.moduleCategory != nil {
+                return count + 1;
+            } else {
+                return count
+            }
+        })
+        
+        return modulesCompletedCount == totalRequiredModules
+            
     }
     
-    var configurationUrls : [[String : [String]]] {
-        
-       let urls = modules.compactMap {
-        module -> [String : [String]]? in
-        
-       if module.moduleType == .Centre { return nil }
-        
-        var urls = [String: [String] ]()
-        
-        urls[module.moduleType.initial] = categories.map({
-            
-             category in
-            
-//            if category == module.moduleCategory {
-//
-//            }
-            
-            return category.initial
-            
-        })
-        return urls
-        
-        }
-        
-        return urls
+    var moduleSet : Set<SpaceStationModule>  {
+        return Set(self.modules)
     }
 
 }
@@ -69,13 +49,13 @@ extension SpaceStation: Encodable {
         case modules
         case categories
         case urls
+        case isComplete
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(modules, forKey: .modules)
         try container.encode(categories, forKey: .categories)
-        try container.encode(configurationUrls, forKey: .urls)
+        try container.encode(isComplete, forKey: .isComplete)
     }
-    
     
 }

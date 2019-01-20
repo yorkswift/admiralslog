@@ -58,9 +58,9 @@ extension ModuleCategory: Decodable {
     init(from decoder: Decoder) throws {
         
        let container = try decoder.singleValueContainer()
-        let rawValue = try container.decode(String.self)
+       let rawValue = try container.decode(String.self)
         
-        if rawValue.isEmpty {
+       if rawValue.isEmpty {
             throw DecodingError.dataCorruptedError(
                 in: container,
                 debugDescription: "Cannot initialize ModuleCategory from an empty string"

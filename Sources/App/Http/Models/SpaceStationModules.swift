@@ -68,4 +68,24 @@ extension SpaceStationModule: Encodable {
         try container.encode(colourHex, forKey: .colourHex)
         try container.encode(moduleCategory?.initial, forKey: .categoryInitial)
     }
+
+}
+
+extension SpaceStationModule : Hashable {
+    var hashValue: Int {
+        
+        guard let categoryinitial = moduleCategory?.initial else {
+            return moduleType.initial.hashValue
+        }
+        
+        return moduleType.initial.hashValue ^ categoryinitial.hashValue
+        
+    }
+}
+
+extension SpaceStationModule: Equatable {
+    static func == (lhs: SpaceStationModule, rhs: SpaceStationModule) -> Bool {
+        return lhs.moduleType == rhs.moduleType &&
+            lhs.moduleCategory == rhs.moduleCategory
+    }
 }

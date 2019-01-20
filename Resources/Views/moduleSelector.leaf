@@ -8,7 +8,6 @@
 
 #set("body") {
 
-
 <video class="lab__video" id="bgvid" playsinline autoplay muted onended="introEnded();" >
 <source src="./media/intro3.mp4" type="video/mp4">
 
@@ -20,19 +19,22 @@
 <form class="modules hidden" method="GET" action="./">
     <div class="modules__selector__wrapper">
     <fieldset class="reset-fieldset modules__selector">
-        <legend class="inverted__text">PLEASE INPUT MODULE CATEGORIES:</legend>
+
+        <legend class="inverted__text">PLEASE INPUT MODULE CATEGORIES: * #(station.isComplete) *</legend>
 
         <div class="padding-large">
 
          #embed("Modules/ModuleHeader")
 
-            #for(module in station.modules) {
+            #for(module in permutations) {
 
-                #embed(module.moduleTypeTemplate)
+                #embed(module.template)
 
             }
 
+
          #embed("Modules/ModuleFooter")
+
                
         </div>
       </fieldset>
