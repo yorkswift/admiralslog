@@ -24,20 +24,20 @@
     <path d="M177.690224,192.334692 C174.456016,187.362403 170.092963,178.126787 174.140322,172.432299" id="Stroke-346" stroke="#(module.colourHex)" stroke-width="2"></path>
     <path d="M193.68671,203.769192 C187.004153,204.281791 180.929435,197.317939 177.690077,192.334619" id="Stroke-348" stroke="#(module.colourHex)" stroke-width="2"></path>
     <g transform="translate(0.000000, 198.000000)">
-        
-        <a xlink:href="#" onClick="radioSelect('#(module.moduleInitial)_A')">
+
+        <a xlink:href="#(module.anchors.A)">
             <path d="M37.9033,63.9336 C22.9893,44.8966 10.5233,25.2006 0.7663,5.1616 L35.7873,0.4516 C44.7743,17.4986 55.9693,34.3176 69.1643,50.6566 L37.9033,63.9336 Z" id="Fill-768" fill="#F4D47E"></path>
         </a>
-        <a xlink:href="#" onClick="radioSelect('#(module.moduleInitial)_D')">
+        <a xlink:href="#(module.anchors.D)">
             <path d="M104.6665,124.5088 C84.7825,110.7418 67.0425,95.6218 51.7875,79.3728 L83.8415,64.5008 C99.0185,79.6638 116.7245,93.7448 136.5825,106.4988 L104.6665,124.5088 Z" id="Fill-766" fill="#89C387"></path>
         </a>
-        <a xlink:href="#" onClick="radioSelect('#(module.moduleInitial)_E')">
+        <a xlink:href="#(module.anchors.E)">
             <path d="M123.1792,136.3809 C144.3932,149.1349 167.6252,160.4409 192.5252,170.1229 L213.3622,144.1509 C191.8902,136.0449 171.7482,126.6979 153.1532,116.2599 L123.1792,136.3809 Z" id="Fill-770" fill="#9B80A6"></path>
         </a>
-        <a xlink:href="#" onClick="radioSelect('#(module.moduleInitial)_I')">
+        <a xlink:href="#(module.anchors.I)">
             <path d="M287.8018,196.5459 C263.5008,191.9049 240.1238,185.8699 217.8818,178.5779 L237.3828,151.8639 C257.9538,158.4059 279.5488,163.8459 301.9708,168.0519 L287.8018,196.5459 Z" id="Fill-772" fill="#99D3DB"></path>
         </a>
-        <a xlink:href="#" onClick="radioSelect('#(module.moduleInitial)_R')">
+        <a xlink:href="#(module.anchors.R)">
             <path d="M390.4868,177.9053 C374.8818,177.3953 354.7848,176.1703 330.5998,172.9433 L317.4988,201.7173 C338.1438,204.5403 359.3558,206.3753 381.0148,207.1453 L390.4868,177.9053 Z" id="Fill-764" fill="#E17654"></path>
         </a>
         

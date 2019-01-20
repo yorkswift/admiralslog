@@ -72,20 +72,14 @@ extension SpaceStationModule: Encodable {
 }
 
 extension SpaceStationModule : Hashable {
-    var hashValue: Int {
-        
-        guard let categoryinitial = moduleCategory?.initial else {
-            return moduleType.initial.hashValue
-        }
-        
-        return moduleType.initial.hashValue ^ categoryinitial.hashValue
-        
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(moduleType.initial)
+        hasher.combine(moduleCategory?.initial)
     }
 }
 
 extension SpaceStationModule: Equatable {
     static func == (lhs: SpaceStationModule, rhs: SpaceStationModule) -> Bool {
-        return lhs.moduleType == rhs.moduleType &&
-            lhs.moduleCategory == rhs.moduleCategory
+        return lhs.moduleType == rhs.moduleType && lhs.moduleCategory == rhs.moduleCategory
     }
 }
