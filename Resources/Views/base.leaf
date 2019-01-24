@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="/styles/app.css">
     #get(headerExtra)
 </head>
-<body class="lab__background">
+<body class="#get(backgroundClass)">
     #get(body)
 </body>
 </html>

@@ -23,9 +23,9 @@ struct SpaceStation {
     
     let totalRequiredModules = 4
     
-    var isComplete : Bool {
+    var completedModules : Int {
         
-        let modulesCompletedCount = modules.reduce(0, {
+        return modules.reduce(0, {
             count , module in
             if module.moduleCategory != nil {
                 return count + 1;
@@ -33,9 +33,11 @@ struct SpaceStation {
                 return count
             }
         })
-        
-        return modulesCompletedCount == totalRequiredModules
             
+    }
+    
+    var isComplete : Bool {
+        return completedModules == totalRequiredModules
     }
     
     var moduleSet : Set<SpaceStationModule>  {
@@ -50,12 +52,15 @@ extension SpaceStation: Encodable {
         case categories
         case urls
         case isComplete
+        case completedModules
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(modules, forKey: .modules)
         try container.encode(categories, forKey: .categories)
         try container.encode(isComplete, forKey: .isComplete)
+        try container.encode(completedModules, forKey: .completedModules)
+        
     }
     
 }

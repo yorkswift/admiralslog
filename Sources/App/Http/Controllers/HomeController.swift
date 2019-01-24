@@ -23,7 +23,7 @@ class HomeController : RouteCollection {
         
         let permutations = ModuleTypePermutations.shared.modulePermutationsFor(station: station, request: req)
         
-        print(permutations)
+       // print(permutations)
     
         let view = try req.view()
         

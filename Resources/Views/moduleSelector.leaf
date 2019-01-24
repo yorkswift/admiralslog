@@ -6,21 +6,25 @@
 <script type="text/javascript" src="./scripts/app.js"></script>
 }
 
+#set("backgroundClass"){
+#if(station.completedModules == 0){lab__background} else {lab2__background}
+}
+
 #set("body") {
 
-<video class="lab__video" id="bgvid" playsinline autoplay muted onended="introEnded();" >
-<source src="./media/intro3.mp4" type="video/mp4">
-
-
+#if(station.completedModules == 0){
+<video class="lab__video" id="bgvid" playsinline autoplay muted onended="introEnded();">
+    <source src="./media/intro.mp4" type="video/mp4">
 </video>
+}
 
 <h2 style="display:none;">Spacestation Modules</h2>
 <div class="padding-medium">
-<form class="modules hidden" method="GET" action="./">
+<form class="modules #if(station.completedModules == 0){hidden}" method="GET" action="./">
     <div class="modules__selector__wrapper">
     <fieldset class="reset-fieldset modules__selector">
 
-        <legend class="inverted__text">PLEASE INPUT MODULE CATEGORIES: * #(station.isComplete) *</legend>
+<legend class="inverted__text">PLEASE INPUT MODULE CATEGORIES:</legend>
 
         <div class="padding-large">
 

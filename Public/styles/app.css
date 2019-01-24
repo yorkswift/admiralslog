@@ -2,7 +2,6 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #000;
 }
 
 body,h2,input {
@@ -15,10 +14,15 @@ body,h2,input {
     margin: 0;
     padding: 0;
 }
-
 .lab__background {
+    background: #000;
+}
+
+.lab2__background {
+    
     background: url(../images/computerlab_background.png) no-repeat center center fixed;
   background-size: cover;
+  background-color:#000;
 }
 
 .lab__video { 
@@ -38,6 +42,12 @@ body,h2,input {
     color: #ffffff;
     width: 74%;
     display: block;
+    
+    -webkit-transition: opacity 0.6s cubic-bezier(.83,.16,.19,.79);
+    -moz-transition: opacity 0.6s cubic-bezier(.83,.16,.19,.79);
+    -ms-transition: opacity 0.6s cubic-bezier(.83,.16,.19,.79);
+    -o-transition: opacity 0.6s cubic-bezier(.83,.16,.19,.79);
+    transition: opacity 0.6s cubic-bezier(.83,.16,.19,.79);
 }
 
 
@@ -116,11 +126,13 @@ body,h2,input {
 }
 
 .hidden {
-    /* display: none; */
+     opacity: 0;
 }
 
 .modules__inputs {
     padding:3em;
+    display: none;
+    
 }
 
 .modules__inputs fieldset {
@@ -132,6 +144,7 @@ body,h2,input {
     .modules {
         display: flex;
     }
+    
     .modules__selector__wrapper {
         width: 66%;
     }

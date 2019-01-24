@@ -1,7 +1,7 @@
 
 introEnded = function(){
     
-    $('.modules').show();
+    $('.modules').removeClass('hidden');
    
 }
 
