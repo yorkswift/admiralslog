@@ -203,6 +203,16 @@ body,h2,input {
     margin:  0 0 2em;
 }
 
+.entry__text-scroll {
+
+    border-top: 2px dashed #fff; 
+
+    height: 460px;
+    overflow: scroll;
+
+    padding-top: 2em;
+}
+
 .entry__graphic {
     width: 37%;
     padding-left: 3%;
@@ -233,5 +243,5 @@ body,h2,input {
 }
 .underline {
     padding-bottom: 2px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px dashed #fff;
 }
