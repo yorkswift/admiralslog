@@ -52,6 +52,7 @@ body,h2,input {
 
 
 .inverted__text {
+    font-weight: normal;
     color:#000;
     background: #fff;
     text-align: center;
@@ -129,6 +130,10 @@ body,h2,input {
      opacity: 0;
 }
 
+.border-white {
+    border: 1px solid #fff;
+}
+
 .modules__inputs {
     padding:3em;
     display: none;
@@ -153,3 +158,80 @@ body,h2,input {
         padding: 0 0 2em 2em;
     }
   }
+
+
+.entry {
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 74%;
+
+}
+
+.entry__modules {
+    width: 80%;
+}
+.entry__modules h2 {
+
+    line-height: 3em;
+    margin: 0 0 2em;
+    padding: 0;
+ 
+}
+
+.entry__points {
+    width: 17%;
+    text-align: right;
+    line-height: 3em;
+    padding-left: 3%;
+}
+
+.entry__points span {
+    line-height: 2em;
+    background: #F3D777;
+    display: block;
+}
+
+.entry__text {
+    width: 60%;
+    line-height: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.entry__text p {
+    margin:  0 0 2em;
+}
+
+.entry__graphic {
+    width: 37%;
+    padding-left: 3%;
+}
+
+.entry__graphic img {
+    width: 100%;
+}
+
+.entry__actions  {
+    margin: 2em 0 0;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.entry__action-controls {
+    width: 60%;
+}
+
+.entry__action-menu {
+    width: 30%;
+    padding-left: 10%;
+}
+
+.entry__action span {
+    display: block;
+}
+.underline {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+}

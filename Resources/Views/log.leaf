@@ -1,7 +1,61 @@
+#set("title") { Admiral's Log }
+
+#set("backgroundClass"){
+lab2__background
+}
 
 #set("body") {
 
-    "Station:" #(station.isComplete)
+<div class="padding-medium">
+
+<div class="entry">
+
+    <div class="entry__modules"><h2 class="inverted__text">AAAA - ACCOMODATION - ACCOMODATION - ACCOMODATION - ACCOMODATION</h2></div>
+
+    <div class="entry__points"><span class="inverted__text">1234 POINTS</span></div>
+
+    <div class="entry__text">
+
+        <div class="border-white padding-medium">
+
+            <p class="star-date"><span class="underline">STARDATE</span>: 41254.7</p>
+
+            <p>There is no colour more evil than beige. Beige is the colour of the office walls of the unnamed, black suited government employee who’s job it is to talk into a small earpiece and order assassinations. Beige is a colour that suggests there has to be some kind of colour, but the colour itself is not important as far more insidious things are happening. And, indeed, they were. The entire station was that most necessary of horrors: a suburb. Row upon row upon row of identical beige houses. Two point four children. Nuclear families as far as the eye could see. Every house the same, every hover car the same, every family the same, every stick of furniture, packed lunch and haircut exactly the same. Measurable to within fractions of an inch, no variation, no escape. Beige, beige, beige.</p>
+            <p>It wasn’t long before they began to see the clown.</p>
+            <p>People began to complain of voices from their drains. Laughter, chatter, sometimes calling to them. Then they began to complain about irregularities in the plumbing. Small things, like blood flying out of sinks, relatively minor inconveniences like that.</p>
+            <p>At first, the Admiral and crew thought perhaps it might be some manner of vengeful Japanese child-ghost, but in the absence of haunted wells and VHS players, this idea was quickly abandoned. Then, however, people began to see things in the storm drains. Bunches of floating balloons, eyes that glinted with a strange dead light and there was always, always that strange giggling laughter.</p>
+            <p>Finally, enough was enough, and they did the only thing they could when faced with a situation such as this: They charged it rent. Bills were posted down every sewer and storm drain they could find. If it wanted to stay and carry on tormenting people, first the clown would have to start paying for it’s water and electric. Faced with mounting debts, the monster was forced to begin seeking gainful employment, and to this end suffered a fate far worse than it could have dreamt up for any of the station’s residents.</p>
+            <p>It started doing children’s birthday parties.</p>
+            <p>Such is life in the Suburbs. Why not try it? Maybe You’ll Float Too.</p>
+
+        </div>
+    </div>
+
+    <div class="entry__graphic">
+        <div class="border-white padding-medium">
+            <img src="images/log/rrde.gif" />
+        </div>
+
+        <div class="entry__actions">
+
+            <div class="entry__action entry__action-controls">
+                <span class="inverted__text">&#9654; PLAY</span>
+            </div>
+
+            <div class="entry__action entry__action-menu">
+               <span class="inverted__text">MENU</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    
+
+</div>
+
+</div>
 
 }
 
