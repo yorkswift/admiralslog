@@ -24,7 +24,7 @@
     <div class="modules__selector__wrapper">
     <fieldset class="reset-fieldset modules__selector">
 
-<legend class="inverted__text">PLEASE INPUT ALL MODULE CATEGORIES:</legend>
+<legend class="inverted__text">#if(station.isComplete){STATION COMPLETE}else{PLEASE INPUT ALL MODULE CATEGORIES:}</legend>
 
         <div class="padding-large">
 
