@@ -80,7 +80,7 @@
         </dl>
     <div>
 
-    <input class="modules__start" type="submit" value="#if(station.isComplete){RETREIVE LOG} else {ENTER}" />     
+    <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />     
 
     </fieldset>
 </div>
