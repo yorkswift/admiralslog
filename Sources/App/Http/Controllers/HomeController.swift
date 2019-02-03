@@ -22,8 +22,6 @@ class HomeController : RouteCollection {
         let station = SpaceStation(stationConfig)
         
         let permutations = ModuleTypePermutations.shared.modulePermutationsFor(station: station, request: req)
-        
-       // print(permutations)
     
         let view = try req.view()
         

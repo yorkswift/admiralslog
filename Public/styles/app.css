@@ -207,7 +207,7 @@ body,h2,input {
 
     border-top: 2px dashed #fff; 
 
-    height: 460px;
+    height: 445px;
     overflow: scroll;
 
     padding-top: 2em;
@@ -236,6 +236,11 @@ body,h2,input {
 .entry__action-menu {
     width: 30%;
     padding-left: 10%;
+}
+
+.entry__action-delete .inverted__text {
+    color: #fff;
+    background: red;
 }
 
 .entry__action span {
