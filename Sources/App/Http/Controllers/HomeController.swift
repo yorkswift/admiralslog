@@ -32,7 +32,7 @@ class HomeController : RouteCollection {
         
         
         
-        let cdn = "http://aaab.admiralslog-store.test/log/"
+        let cdn = "images/"
         
         
         struct LogContext : Encodable {

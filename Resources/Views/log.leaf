@@ -30,7 +30,7 @@ lab2__background
 
     <div class="entry__graphic">
         <div class="border-white padding-medium">
-            <img src="#(cdn)graphics/#(station.initials).gif" />
+            <img src="#(cdn)log/#(station.initials).gif" />
         </div>
 
         <div class="entry__actions">
