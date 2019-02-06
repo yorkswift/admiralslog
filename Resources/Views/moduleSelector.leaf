@@ -36,8 +36,7 @@
 
             }
 
-
-         #embed("Modules/ModuleFooter")
+           #embed("Modules/ModuleFooter")
 
                
         </div>
@@ -80,9 +79,14 @@
         </dl>
     <div>
 
-    <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />     
+    <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />
 
     </fieldset>
+    
+    <div class="modules__reset inverted__text #if(station.isComplete){hidden}">
+      <a href="/">RESET</a>
+    </div>
+
 </div>
 	</form>
 </div>

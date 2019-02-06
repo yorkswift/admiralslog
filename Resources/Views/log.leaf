@@ -10,7 +10,7 @@ lab2__background
 
 <div class="entry">
 
-    <div class="entry__modules"><h2 class="inverted__text">AAAA - ACCOMODATION - ACCOMODATION - ACCOMODATION - ACCOMODATION</h2></div>
+<div class="entry__modules"><h2 class="inverted__text">#(station.initials) - ACCOMODATION - ACCOMODATION - ACCOMODATION - ACCOMODATION</h2></div>
 
     <div class="entry__points"><span class="inverted__text">1234 POINTS</span></div>
 
@@ -18,7 +18,7 @@ lab2__background
 
         <div class="border-white padding-medium">
 
-            <p class="star-date"><span class="">LOG #</span>: 41254.7</p>
+<p class="star-date"><span class="">LOG #</span>: #(logNumber)</p>
 
             <div class="entry__text-scroll">
             <p>There is no colour more evil than beige. Beige is the colour of the office walls of the unnamed, black suited government employee who’s job it is to talk into a small earpiece and order assassinations. Beige is a colour that suggests there has to be some kind of colour, but the colour itself is not important as far more insidious things are happening. And, indeed, they were. The entire station was that most necessary of horrors: a suburb. Row upon row upon row of identical beige houses. Two point four children. Nuclear families as far as the eye could see. Every house the same, every hover car the same, every family the same, every stick of furniture, packed lunch and haircut exactly the same. Measurable to within fractions of an inch, no variation, no escape. Beige, beige, beige.</p>
@@ -34,7 +34,7 @@ lab2__background
 
     <div class="entry__graphic">
         <div class="border-white padding-medium">
-            <img src="images/log/rrde.gif" />
+            <img src="#(cdn)graphics/#(station.initials).gif" />
         </div>
 
         <div class="entry__actions">

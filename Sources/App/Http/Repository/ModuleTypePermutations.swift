@@ -8,6 +8,7 @@ struct ModulePermuation : Encodable {
     var moduleInitial : String
     var template : String
     var colourHex : String
+    var needsCategory : Bool
     var anchors : [String : String]
     
 }
@@ -26,16 +27,18 @@ class ModuleTypePermutations {
     func modulePermutationsFor(station: SpaceStation, request: Request) -> [ModulePermuation] {
         
             return station.modules.compactMap {
+                
                 module -> ModulePermuation? in
                 
                 var categoryAnchors = [String:String]()
          
                 if(module.moduleType != .Centre){
+                    
                     categoryAnchors = station.categories.reduce(into: [:]) {
                     
-                    (anchors,category)  in
+                        (anchors,category) in
                     
-                    anchors[category.initial] = "#"
+                            anchors[category.initial] = "#"
                     
                     do {
                         
@@ -64,6 +67,7 @@ class ModuleTypePermutations {
                         }
                         
                         
+                        
                         try request.query.encode(permuationConfig)
                         
                         if let queryString = request.http.url.query {
@@ -84,6 +88,7 @@ class ModuleTypePermutations {
                         moduleInitial: module.moduleType.initial,
                         template: "Modules/" + module.moduleType.rawValue,
                         colourHex : module.colourHex,
+                        needsCategory : module.needsCategory,
                         anchors : categoryAnchors)
                 
             }

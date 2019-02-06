@@ -36,6 +36,21 @@ struct SpaceStation {
             
     }
     
+    var initials : String {
+        
+            return String(modules.reduce("", {
+                initials , module in
+                
+                if let initial = module.moduleCategory?.initial {
+                    return initials + initial;
+                } else {
+                    return initials
+                }
+ 
+            }).sorted())
+        
+    }
+    
     var isComplete : Bool {
         return completedModules == totalRequiredModules
     }
@@ -53,6 +68,7 @@ extension SpaceStation: Encodable {
         case urls
         case isComplete
         case completedModules
+        case initials
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -60,6 +76,7 @@ extension SpaceStation: Encodable {
         try container.encode(categories, forKey: .categories)
         try container.encode(isComplete, forKey: .isComplete)
         try container.encode(completedModules, forKey: .completedModules)
+        try container.encode(initials, forKey: .initials)
         
     }
     

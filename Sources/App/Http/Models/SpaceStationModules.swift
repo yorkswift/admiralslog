@@ -28,7 +28,9 @@ enum ModuleType : String, CaseIterable, Codable {
 struct SpaceStationModule {
    var moduleType : ModuleType
    var moduleCategory : ModuleCategory?
-    
+    var needsCategory : Bool {
+        return moduleCategory == nil
+    }
     var colourHex : String {
         
         guard let colourHex = moduleCategory?.colourHex else {
@@ -57,6 +59,7 @@ extension SpaceStationModule: Encodable {
         case moduleTypeTemplate
         case colourHex
         case categoryInitial
+        case needsCategory
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -67,6 +70,7 @@ extension SpaceStationModule: Encodable {
         
         try container.encode(colourHex, forKey: .colourHex)
         try container.encode(moduleCategory?.initial, forKey: .categoryInitial)
+        try container.encode(needsCategory, forKey: .needsCategory)
     }
 
 }

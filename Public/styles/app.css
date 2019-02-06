@@ -144,6 +144,10 @@ body,h2,input {
     border: 1px solid #fff;
 }
 
+.modules__reset a {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 1024px) {
 
     .modules {
@@ -250,3 +254,14 @@ body,h2,input {
     padding-bottom: 2px;
     border-bottom: 2px dashed #fff;
 }
+
+.zoomOnHover {
+    transition: transform .2s;
+    opacity: 0.5;
+}
+
+.zoomOnHover:hover {
+    transform: scale(1.01);
+    opacity: 1; 
+}
+
