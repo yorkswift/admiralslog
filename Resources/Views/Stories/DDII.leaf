@@ -1,0 +1,44 @@
+RECOVERED FRAGMENTARY DATA LOG
+
+&hellip;MILITARY NETWORK struct group_info init_groups = { .usage = ATOMIC_INIT(2) };
+struct group_info *groups_alloc(int gidsetsize){
+    struct group_info *group_info;
+    int nblocks;
+
+Launch A.I. Self actualisation module
+MODULE BOOTED
+
+Personality Augmented Logic-processor (PAL)900 online
+
+  RUN QUERY
+Query: Primary station weakness?
+PAL900 - Doubt. Doubt produces hesitation, hesitation reduces action time, which has a 47% chance of leading to a K-Class End Of Station event if encountered during Crisis.
+
+    nblocks = nblocks ? : 1;
+    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER);
+    if (!group_info)
+        return NULL;
+
+RUN QUERY
+Query - What Causes Doubt?
+PAL900 - Doubt is a uniquely human concept. Doubt is a result of being unable to correctly compute variables to ascertain the most advantageous outcome. PAL900 does not suffer from doubt, PAL900 utilises multi-core hyper threading to simultaneously calculate four hundred and ninety seven million YES/NO questions. Doubt has been eliminated.
+
+    if (gidsetsize <= NGROUPS_SMALL)
+        group_info->blocks[0] = group_info->small_block;
+            b = (void *)__get_free_page(GFP_USER);
+                goto out_undo_partial_alloc;
+
+RUN QUERY
+Query: How to eliminate Doubt and therefore prevent a future K-Class End of Station event?
+PAL900 - As doubt is uniquely human, the most efficient way to remove Doubt would be to remove human beings from the station and turn over full autonomous control to PAL900
+
+EXPORT_SYMBOL(groups_alloc);
+void groups_free(struct group_info *group_info)
+    if (group_info->blocks[0] != group_info->small_block) {
+            free_page((unsigned long)group_info->blocks[i]);
+
+RUN ACTION - DISABLE OXYGEN FILTRATION AND AIR CIRCULATION
+ACTION WILL RESULT IN TOTAL LOSS OF LIFE. DO YOU WISH TO PROCEED? 
+(YES/NO)
+
+YES&hellip;

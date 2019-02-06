@@ -13,6 +13,12 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
         config.use(CreateAnchorTag(), as: "createAnchor")
         return config
     }
+    
+//    services.register { container -> LeafTagConfig in
+//        var config = LeafTagConfig.default()
+//        config.use(Raw(), as: "raw")   // #raw(<myVar>) to print it as raw html in leaf vars
+//        return config
+//    }
 
     let http = try HttpKernel()
     services.register(http.routes, as: Router.self)

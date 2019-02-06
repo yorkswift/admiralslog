@@ -60,6 +60,11 @@ body,h2,input {
     margin: 0;
 }
 
+.inverted__text a {
+    color:#000;
+    text-decoration: none;
+}
+
 
 .modules legend {
     position: relative;

@@ -51,6 +51,39 @@ struct SpaceStation {
         
     }
     
+    var sortedCategories : String {
+        if(isComplete){
+            
+            let categoriesSorted = modules.sorted { (lhs:SpaceStationModule, rhs:SpaceStationModule) in
+                
+                guard let first: String = lhs.moduleCategory?.initial else { return false }
+                guard let second: String = rhs.moduleCategory?.initial else { return true }
+                
+                return first < second
+            }
+            
+            return categoriesSorted.reduce("",{
+                categoryString , module in
+                
+                if let category = module.moduleCategory {
+                    
+                  //  return categoryString + " - <span style='color:" + category.colourHex + "'>" + category.rawValue.uppercased() + "</span>";
+                    
+                    return categoryString + " - " + category.rawValue.uppercased();
+                    
+                } else {
+                    return categoryString
+                }
+                
+            })
+            
+            
+        } else {
+            return ""
+        }
+        
+    }
+    
     var isComplete : Bool {
         return completedModules == totalRequiredModules
     }
@@ -68,7 +101,9 @@ extension SpaceStation: Encodable {
         case urls
         case isComplete
         case completedModules
+        case sortedCategories
         case initials
+        case logLocation
     }
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -76,7 +111,9 @@ extension SpaceStation: Encodable {
         try container.encode(categories, forKey: .categories)
         try container.encode(isComplete, forKey: .isComplete)
         try container.encode(completedModules, forKey: .completedModules)
+        try container.encode(sortedCategories, forKey: .sortedCategories)
         try container.encode(initials, forKey: .initials)
+         try container.encode("Stories/"+initials, forKey: .logLocation)
         
     }
     
