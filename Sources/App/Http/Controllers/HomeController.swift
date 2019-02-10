@@ -36,7 +36,6 @@ class HomeController : RouteCollection {
             var cdn : String
             var bitmapGraphics : [String]
             var noGraphics : [String]
-            var multiGraphics : [String:[String]]
             var customTemplates : [String]
         }
         
@@ -57,7 +56,6 @@ class HomeController : RouteCollection {
                 cdn: graphics.cdn,
                 bitmapGraphics: graphics.bitmap,
                 noGraphics: graphics.none,
-                multiGraphics: graphics.multi,
                 customTemplates : templates.customLayout
                 ))
     }
