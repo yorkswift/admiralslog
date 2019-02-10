@@ -270,3 +270,36 @@ body,h2,input {
     opacity: 1; 
 }
 
+.two_col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.noticeboard__notice {
+ width: 50%;
+}
+.noticeboard__title {
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-bottom: 1em;
+    border-bottom: 2px dashed #fff; 
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.noticeboard__graphic {
+    float: left;
+    width: 35%;
+    margin: 1em 1em 0 0;
+}
+
+.noticeboard__graphic img{
+    width: 100%;
+}
+
+.noticeboard__message {
+    line-height: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

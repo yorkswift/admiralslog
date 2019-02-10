@@ -5,6 +5,6 @@ class TemplateRepository {
     
     static let shared = TemplateRepository()
     
-    let customLayout = ["AARR","DDDD","DIRR","RRRR"]
+    let customLayout = ["AARR","DEII","DDDD","DIRR","RRRR"]
     
 }
