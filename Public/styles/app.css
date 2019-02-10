@@ -313,6 +313,11 @@ body,h2,input {
     
 }
 
+.conversation__col--right {
+    width: 47%;
+    margin-left: 3%; 
+}
+
 .conversation__service {
     text-align: center;
 }

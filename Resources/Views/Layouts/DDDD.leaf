@@ -3,7 +3,7 @@
   
     <div class="conversation__col">
 
-        <div class="padding-medium">
+        <div class="">
         <div class="border-white padding-medium">
          <h3 class="conversation__title">DOCUMENT FRAGMENT - RECOVERED NOTES, RON SQUID-RING AND SONS SHIPWRIGHT AND STATION BUILDERS LTD.</h3>
         <div class="conversation__service">L5Message</div>
@@ -29,9 +29,9 @@
         </div>
 
     </div>
-    <div class="conversation__col">
+    <div class="conversation__col conversation__col--right">
 
-        <div class="padding-medium">
+        <div class="">
 
         <div class="border-white padding-medium">
 
