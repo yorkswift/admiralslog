@@ -1,0 +1,48 @@
+
+    <div class="entry__text">
+
+        <div class="border-white padding-medium">
+
+            <p class="star-date"><span class="">LOG #</span>: #(logNumber)</p>
+
+            <div class="entry__text-scroll">
+
+                      #embed( station.logLocation )
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="entry__graphic">
+
+         #if(contains(bitmapGraphics,station.initials)) {
+
+            <div class="border-white padding-medium">
+                <img src="#(cdn)log/#(station.initials).jpg" />
+            </div>
+
+        } else if(contains(noGraphics,station.initials)) {
+                no graphic
+
+        } else {
+
+            <div class="border-white padding-medium">
+                <img src="#(cdn)log/#(station.initials).gif" />
+            </div>
+
+        }
+
+        <div class="entry__actions">
+
+            <div class="entry__action entry__action-controls">
+                <span class="inverted__text">&#9654; PLAY AUDIO RECORDING</span>
+            </div>
+
+            <div class="entry__action entry__action-menu">
+               <span class="inverted__text"><a href="/">EXIT LOG</a></span>
+            </div>
+
+        </div>
+
+    </div>

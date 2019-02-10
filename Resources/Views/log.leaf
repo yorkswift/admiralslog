@@ -10,44 +10,18 @@ lab2__background
 
 <div class="entry">
 
-<div class="entry__modules"><h2 class="inverted__text">#(station.initials) #(station.sortedCategories)</h2></div>
+    <div class="entry__modules"><h2 class="inverted__text">#(station.initials) #(station.sortedCategories)</h2></div>
 
     <div class="entry__points"><span class="inverted__text">1234 POINTS</span></div>
 
-    <div class="entry__text">
+    #if(contains(customTemplates,station.initials)) {
 
-        <div class="border-white padding-medium">
+        #set("customEmbed"){Layouts/#(station.initials)}
+        #embed(customEmbed)
 
-<p class="star-date"><span class="">LOG #</span>: #(logNumber)</p>
-
-            <div class="entry__text-scroll">
-
-                      #embed( station.logLocation )
-
-            </div>
-        </div>
-    </div>
-
-    <div class="entry__graphic">
-        <div class="border-white padding-medium">
-            <img src="#(cdn)log/#(station.initials).gif" />
-        </div>
-
-        <div class="entry__actions">
-
-            <div class="entry__action entry__action-controls">
-                <span class="inverted__text">&#9654; PLAY AUDIO RECORDING</span>
-            </div>
-
-            <div class="entry__action entry__action-menu">
-               <span class="inverted__text"><a href="/">EXIT LOG</a></span>
-            </div>
-
-        </div>
-
-    </div>
-
-    
+    } else {
+        #embed("Layouts/default")
+    }
 
 </div>
 

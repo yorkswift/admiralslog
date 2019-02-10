@@ -30,17 +30,15 @@ class HomeController : RouteCollection {
     
     func getLogHandler(_ req: Request) throws -> Future<View> {
         
-        
-        
-        let cdn = "images/"
-        
-        
         struct LogContext : Encodable {
             var station : SpaceStation
             var logNumber : Float
             var cdn : String
+            var bitmapGraphics : [String]
+            var noGraphics : [String]
+            var multiGraphics : [String:[String]]
+            var customTemplates : [String]
         }
-        
         
         let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
         
@@ -50,7 +48,18 @@ class HomeController : RouteCollection {
         
         let view = try req.view()
         
-        return view.render("log", LogContext(station: station, logNumber: logNumber, cdn: cdn))
+        let graphics = GraphicsRepository.shared
+        let templates = TemplateRepository.shared
+        
+        return view.render("log", LogContext(
+                station: station,
+                logNumber: logNumber,
+                cdn: graphics.cdn,
+                bitmapGraphics: graphics.bitmap,
+                noGraphics: graphics.none,
+                multiGraphics: graphics.multi,
+                customTemplates : templates.customLayout
+                ))
     }
     
 }
