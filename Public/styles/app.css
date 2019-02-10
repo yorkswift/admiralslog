@@ -21,8 +21,8 @@ body,h2,input {
 .lab2__background {
     
     background: url(../images/computerlab_background.png) no-repeat center center fixed;
-  background-size: cover;
-  background-color:#000;
+    background-size: cover;
+    background-color:#000;
 }
 
 .lab__video { 
@@ -291,7 +291,7 @@ body,h2,input {
 .noticeboard__graphic {
     float: left;
     width: 35%;
-    margin: 1em 1em 0 0;
+    margin: 0.5em 1em 0 0;
 }
 
 .noticeboard__graphic img{
@@ -302,4 +302,74 @@ body,h2,input {
     line-height: 2em;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.conversation {
+
+}
+
+.conversation__col {
+    width: 50%;
+    
+}
+
+.conversation__service {
+    text-align: center;
+}
+
+.conversation__timestamp {
+    text-align: center;
+}
+
+.conversation__title {
+    text-transform: uppercase;
+}
+
+.conversation__speech {
+    padding: 1em;
+    margin: 2em;
+    position: relative;
+    border-radius: .4em;
+    text-transform: uppercase;
+}
+
+.conversation__speech--left {
+    color: #F3D777;
+    border: 2px #F3D777 solid;
+    margin-right: 6em;
+}
+
+.conversation__speech--left:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 70%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-right-color: #F3D777;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -7.5px;
+	margin-left: -16px;
+}
+
+.conversation__speech--right {
+    border: 2px #fff solid;
+    margin-left: 6em;
+}
+
+.conversation__speech--right:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 73%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-left-color: #fff;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -7.5px;
+	margin-right: -15px;
 }

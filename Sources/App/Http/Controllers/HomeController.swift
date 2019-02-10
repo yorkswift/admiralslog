@@ -35,13 +35,16 @@ class HomeController : RouteCollection {
             var logNumber : Float
             var cdn : String
             var bitmapGraphics : [String]
-            var noGraphics : [String]
             var customTemplates : [String]
         }
         
         let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
         
         let station = SpaceStation(stationConfig)
+        
+        if(!station.isComplete){
+            return try getModuleSelectorHandler(req)
+        }
         
         let logNumber = Float.random(in: 234234..<999999)
         
@@ -55,7 +58,6 @@ class HomeController : RouteCollection {
                 logNumber: logNumber,
                 cdn: graphics.cdn,
                 bitmapGraphics: graphics.bitmap,
-                noGraphics: graphics.none,
                 customTemplates : templates.customLayout
                 ))
     }

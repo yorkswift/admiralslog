@@ -1,0 +1,57 @@
+
+<div class="conversation two_col">
+  
+    <div class="conversation__col">
+
+        <div class="padding-medium">
+        <div class="border-white padding-medium">
+         <h3 class="conversation__title">DOCUMENT FRAGMENT - RECOVERED NOTES, RON SQUID-RING AND SONS SHIPWRIGHT AND STATION BUILDERS LTD.</h3>
+        <div class="conversation__service">L5Message</div>
+        <div class="conversation__timestamp"><span>Yesterday</span>, 16:28</div>
+
+        <div class="conversation__speech conversation__speech--right">
+        Admiral, Received the latest design brief, it's been a bit of a stretch but I think we've managed to incorporate all of the elements you asked for in your original proposal. It should be noted that only the fusion core of an actual sun could sustain such a quantity of laser turrets, but theoretically it IS possible. All we need is your signature of approval and we can begin construction.
+        - R.S
+        </div>
+
+        <div class="conversation__speech conversation__speech--left">
+        Ron, Unfortunately, I am going to have to change the design brief. It has come to my attention that some travellers at Lagrange Points have fallen prey to pirates. I would therefore request that we add another layer of Alanmantium plating to the outer hull of the space station, just to err on the side of caution. Better safe than sorry, after all.
+        - Admiral
+        </div>
+   
+        <div class="conversation__speech conversation__speech--right">
+        Admiral, We have already taken the precaution of removing all windows and viewing ports from the exterior housing of the station. Another layer of plating would be a redundant expense, as well as requiring significant revision of the inner bulkhead support structure in order to facilitate this. If you think it necessary, we will accomodate, but must advise that such a move would be redundant.
+        - R.S
+        </div>
+
+         </div>
+
+        </div>
+
+    </div>
+    <div class="conversation__col">
+
+        <div class="padding-medium">
+
+        <div class="border-white padding-medium">
+
+        <div class="conversation__speech conversation__speech--left">
+        Ron, Add it. Also, there seems to be a few spaces left on the exterior of the station not occupied by either laser turrets or torpedo batteries, I assumed these to be an oversight on the part of the architect so took the liberty of sketching them in. See attached.
+        - Admiral
+        </div>
+
+        <div class="conversation__speech conversation__speech--right">
+        Admiral, This was not an oversight. The logistics of powering the current array of lasers and housing the required ammunition for the already proposed torpedo batteries would mean that living space within the station would be reduced to a single broom cupboard and a chemical toilet in a roof alcove. Such living arrangements are already claustrophobic in the extreme and suitable for no more than two to three very small crew members. Adding more weapons to the exterior of the station would eliminate the ability of the station to support life, thus rendering it unable to execute it's primary function.
+        - R.S
+        </div>
+
+        <div class="conversation__speech conversation__speech--left">
+        Ron, Go ahead and add them. We'll figure out the sleeping arrangements later.
+        - Admiral.
+        </div>
+           </div>
+    </div>
+
+     </div>
+
+</div>
