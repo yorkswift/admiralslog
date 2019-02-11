@@ -2,9 +2,9 @@
 
     <div class="conversation__col">
 
-        <div class="border-white padding-medium">
+        <div class="">
 
-            <h3 class="conversation__title">SNAPSHOT - SPACEBOOK STATUS UPDATES, STATION ADMIRAL</h3>
+            <h3 class="conversation__title">SNAPSHOT - SPACEBOOK STATUS UPDATES, STATION Admiral</h3>
 
             <div class="conversation__post">
 
@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="conversation__post__username">
-                        ADMIRAL
+                        Admiral
                         <span class="conversation__post__useraction">
                             Shared a Link
                         </span>
@@ -31,9 +31,15 @@
                     <img src="#(cdn)log/DIRR_01.gif" />
                 </div>
 
+                <p class="conversation__comment__text">Seeing a lot of adverts for #FullyRemember around,
+                    looks really cool, anyone tried it? I heard it's like taking a holiday but you don't
+                    actually go anywhere, you just think you did #curious #askingforafriend #notreally
+                    #adventure #ineedaholiday</p>
+
                 <div class="conversation__post__actions">
-                    Approve - Comment
+                    125 Approves - 3 Comments
                 </div>
+
 
                 <div class="conversation__comments">
 
@@ -42,92 +48,64 @@
                         <div class="conversation__post__meta">
 
                             <div class="conversation__post__avatar">
-                                <img src="#(cdn)log/DIRR_02.gif" />
+                                <img src="#(cdn)log/DIRR_03.gif" />
                             </div>
 
                             <div class="conversation__post__username">
-                                ADMIRAL
+                                Jeff
                             </div>
 
-                            <div class="conversation__post__timestamp">
-                                05/03/1974
-                            </div>
-
-                            <p class="conversation__comment__text">Seeing a lot of adverts for #FullyRemember around,
-                                looks really cool, anyone tried it? I heard it's like taking a holiday but you don't
-                                actually go anywhere, you just think you did #curious #askingforafriend #notreally
-                                #adventure #ineedaholiday</p>
-
-                            <div class="conversation__comments">
-
-                                <div class="conversation__comment">
-
-                                    <div class="conversation__post__meta">
-
-                                        <div class="conversation__post__avatar">
-                                            <img src="#(cdn)log/DIRR_03.gif" />
-                                        </div>
-
-                                        <div class="conversation__post__username">
-                                            JEFF
-                                        </div>
-
-                                        <p class="conversation__comment__text">My friend Hannah did it, now she won't
-                                            stop telling us about a Gap Year she did in Peru that never actually
-                                            happened. She's now Vegan. #dontjudgemeforeatingbacon</p>
-                                    </div>
-                                </div>
-
-                                <div class="conversation__comment">
-
-                                    <div class="conversation__post__meta">
-
-                                        <div class="conversation__post__avatar">
-                                            <img src="#(cdn)log/DIRR_04.gif" />
-                                        </div>
-
-                                        <div class="conversation__post__username">
-                                            HANNAH
-                                        </div>
-
-                                        <p class="conversation__comment__text">Shut up Jeff, you can't understand the
-                                            impact we're having until you've stood on Machu Picchu and seen the whole of
-                                            the Rocky Mountains arranged before you. #breathtakingAF #takemeback
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="conversation__comment">
-
-                                    <div class="conversation__post__meta">
-
-                                        <div class="conversation__post__avatar">
-                                            <img src="#(cdn)log/DIRR_03.gif" />
-                                        </div>
-
-                                        <div class="conversation__post__username">
-                                            JEFF
-                                        </div>
-
-                                        <p class="conversation__comment__text">You do know the Rocky Mountains aren't in
-                                            Peru, don't you? </p>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                            <p class="conversation__comment__text">My friend Hannah did it, now she won't
+                                stop telling us about a Gap Year she did in Peru that never actually
+                                happened. She's now Vegan. #dontjudgemeforeatingbacon</p>
                         </div>
                     </div>
 
+                    <div class="conversation__comment">
 
+                        <div class="conversation__post__meta">
+
+                            <div class="conversation__post__avatar">
+                                <img src="#(cdn)log/DIRR_04.gif" />
+                            </div>
+
+                            <div class="conversation__post__username">
+                                Hannah
+                            </div>
+
+                            <p class="conversation__comment__text">Shut up Jeff, you can't understand the impact we're
+                                having until you've stood on Machu Picchu and seen the whole of
+                                the Rocky Mountains arranged before you. #breathtakingAF #takemeback
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="conversation__comment">
+
+                        <div class="conversation__post__meta">
+
+                            <div class="conversation__post__avatar">
+                                <img src="#(cdn)log/DIRR_03.gif" />
+                            </div>
+
+                            <div class="conversation__post__username">
+                                Jeff
+                            </div>
+
+                            <p class="conversation__comment__text">You do know the Rocky Mountains aren't in Peru, don't
+                                you? </p>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
 
     </div>
     <div class="conversation__col--right">
 
-        <div class="border-white padding-medium">
+        <div class="">
 
             <div class="conversation__post">
 
@@ -138,10 +116,7 @@
                     </div>
 
                     <div class="conversation__post__username">
-                        ADMIRAL
-                        <span class="conversation__post__useraction">
-                            Shared a Link
-                        </span>
+                        Admiral
                     </div>
 
                     <div class="conversation__post__timestamp">
@@ -155,14 +130,106 @@
                     Wish me luck! Two Weeks! #adventure #holiday #travelling #followmeplease #TwoWeeks</p>
 
                 <div class="conversation__post__actions">
-                    Approve - Comment
+                    38 Approves - 1 Comment
                 </div>
 
-                <div class="conversation__comments">
-
-                    <div class="conversation__comment">
 
                         <div class="conversation__comments">
+
+                            <div class="conversation__comment">
+
+                                <div class="conversation__post__meta">
+
+                                    <div class="conversation__post__avatar">
+                                        <img src="#(cdn)log/DIRR_05.gif" />
+                                    </div>
+
+                                    <div class="conversation__post__username">
+                                        Helen
+                                    </div>
+
+                                    <p class="conversation__comment__text">Don't let them hypnotise you into thinking
+                                        you're a rubber chicken or something! #thedangerisreal
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+            </div>
+
+            <div class="conversation__post">
+
+                <div class="conversation__post__meta">
+
+                    <div class="conversation__post__avatar">
+                        <img src="#(cdn)log/DIRR_02.gif" />
+                    </div>
+
+                    <div class="conversation__post__username">
+                        Admiral
+                    </div>
+
+                    <div class="conversation__post__timestamp">
+                        05/03/1974
+                    </div>
+
+                </div>
+
+                <p class="conversation__post__text">Today's the day! So excited to do my #FullyRemember treatment this
+                    afternoon! #dontevenneedabeachbody #holidayromance
+                </p>
+
+                <div class="conversation__post__actions no-comments">
+                    63 Approves - Comment
+                </div>
+
+            </div>
+
+            <div class="conversation__post">
+
+                <div class="conversation__post__meta">
+
+                    <div class="conversation__post__avatar">
+                        <img src="#(cdn)log/DIRR_02.gif" />
+                    </div>
+
+                    <div class="conversation__post__username">
+                        Admiral
+                    </div>
+
+                    <div class="conversation__post__timestamp">
+                        05/03/1974
+                    </div>
+
+                </div>
+
+                <p class="conversation__post__text">I'm compromised, they're going to blow my cover! Get word to the
+                    mutants, tell them to begin the uprising NOW! Got to get this damn tracker out of my head, they keep
+                    trying to tell me it's all just a fake memory, that who I think I am isn't me, but if I'm not me
+                    then who the hell am I? Just got to get back, got to warn them. New plan: Get my ass to Mars!</p>
+
+                <div class="conversation__post__actions">
+                    103 Approves - 2 Comments
+                </div>
+
+                        <div class="conversation__comments">
+
+                            <div class="conversation__comment">
+
+                                <div class="conversation__post__meta">
+
+                                    <div class="conversation__post__avatar">
+                                        <img src="#(cdn)log/DIRR_03.gif" />
+                                    </div>
+
+                                    <div class="conversation__post__username">
+                                        Jeff
+                                    </div>
+
+                                    <p class="conversation__comment__text">Uh oh.</p>
+                                </div>
+                            </div>
 
                             <div class="conversation__comment">
 
@@ -173,20 +240,16 @@
                                     </div>
 
                                     <div class="conversation__post__username">
-                                        HELEN
+                                        Hannah
                                     </div>
 
-                                    <p class="conversation__comment__text">Don't let them hypnotise you into thinking you're a rubber chicken or something! #thedangerisreal
-                                    </p>
+                                    <p class="conversation__comment__text">Should have chosen the Peru package #GapYear
+                                        #missthis #takemeback</p>
                                 </div>
                             </div>
 
                         </div>
-                    </div>
 
-
-                </div>
-            </div>
         </div>
 
     </div>
