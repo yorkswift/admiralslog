@@ -1,0 +1,11 @@
+<div class="entry__actions">
+
+    <div class="entry__action entry__action-controls">
+        <span class="inverted__text">&#9654; PLAY AUDIO RECORDING</span>
+    </div>
+
+    <div class="entry__action entry__action-menu">
+        <span class="inverted__text"><a href="/">EXIT LOG</a></span>
+    </div>
+
+</div>
