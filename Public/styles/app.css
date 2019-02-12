@@ -276,9 +276,35 @@ body,h2,input {
     flex-direction: row;
 }
 
-.noticeboard__notice {
- width: 50%;
+.columns {
+ display: block;
 }
+
+.column__half, .column__half--left, .column__half--right {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .column__half {
+        width: 50%;
+    }
+    .column__half--left {
+        width: 48%;
+        margin-right: 2%;
+    }
+    .column__half--right{
+        width: 48%;
+        margin-left: 2%;
+    }
+
+}
+
 .noticeboard__title {
     text-transform: uppercase;
     font-weight: normal;
@@ -304,13 +330,8 @@ body,h2,input {
     text-transform: uppercase;
 }
 
-.conversation {
-
-}
-
-.conversation__col {
+.conversation__col, .half_col {
     width: 50%;
-    
 }
 
 .conversation__col--right {
@@ -442,4 +463,28 @@ body,h2,input {
 .conversation__comment {
     padding-left:3em;
     margin: 0 0 2em;
+}
+
+.reviews__title{
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.review__title, .review__author {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.review {
+    border-top: 1px #fff solid;
+    padding-top:1em; 
+}
+
+.review__content{
+    color:#F3D777;
+}
+
+.review__legal {
+    font-size: 9px;
 }

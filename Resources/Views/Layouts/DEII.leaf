@@ -1,8 +1,8 @@
 
 
-<div class="noticeboard two_col">
+<div class="noticeboard columns">
 
-    <div class="noticeboard__notice">
+    <div class="noticeboard__notice column__half">
 
 
         <div class="padding-medium">
@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="noticeboard__notice">
+    <div class="noticeboard__notice column__half">
 
         <div class="padding-medium">
 
@@ -46,7 +46,7 @@
 
     </div>
 
-    <div class="noticeboard__notice">
+    <div class="noticeboard__notice column__half">
 
         <div class="padding-medium">
         <div class="border-white padding-medium">
@@ -64,7 +64,7 @@
 
     </div>
 
-    <div class="noticeboard__notice">
+    <div class="noticeboard__notice column__half">
 
         <div class="padding-medium">
         <div class="border-white padding-medium">
