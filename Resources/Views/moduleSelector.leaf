@@ -7,12 +7,12 @@
 }
 
 #set("backgroundClass"){
-#if(station.completedModules == 0){lab__background} else {lab2__background}
+    #if(options.skip || station.completedModules == 0){lab__background} else {lab2__background}
 }
 
 #set("body") {
 
-#if(station.completedModules == 0){
+#if(options.skip || station.completedModules == 0){
 <video class="lab__video" id="bgvid" playsinline autoplay muted onended="introEnded();">
     <source src="./media/intro.mp4" type="video/mp4">
 </video>
@@ -20,7 +20,7 @@
 
 <h2 style="display:none;">Spacestation Modules</h2>
 <div class="padding-medium">
-<form class="modules #if(station.completedModules == 0){hidden}" method="GET" action="#if(station.isComplete){./log} else {./}">
+<form class="modules #if(options.skip || station.completedModules == 0){hidden}" method="GET" action="#if(station.isComplete){./log} else {./}">
     <div class="modules__selector__wrapper">
     <fieldset class="reset-fieldset modules__selector">
 

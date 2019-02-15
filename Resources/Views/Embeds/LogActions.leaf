@@ -5,7 +5,7 @@
     </div>
 
     <div class="entry__action entry__action-menu">
-        <span class="inverted__text"><a href="/">EXIT LOG</a></span>
+        <span class="inverted__text"><a href="/?skip">EXIT LOG</a></span>
     </div>
 
 </div>

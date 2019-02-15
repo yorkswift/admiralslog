@@ -217,7 +217,8 @@ body,h2,input {
     border-top: 2px dashed #fff; 
 
     height: 445px;
-    overflow: scroll;
+    overflow-x : hidden;
+    overflow-y: auto;
 
     padding-top: 2em;
 }

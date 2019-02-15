@@ -15,9 +15,27 @@ class HomeController : RouteCollection {
         struct ModuleSelectorContext : Encodable {
            var station : SpaceStation
            var permutations : [ModulePermuation]
+            var options :LoadOptions
         }
         
-       let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
+        struct LoadOptions: Content {
+            var skip: Bool?
+        }
+        
+         var loadOptions = LoadOptions(skip: false)
+        
+        do{
+            loadOptions = try req.query.decode(LoadOptions.self)
+            
+            if(loadOptions.skip == nil){ loadOptions.skip = false }
+            
+        } catch {
+           print("error")
+        }
+        
+        print(loadOptions)
+        
+        let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
         
         let station = SpaceStation(stationConfig)
         
@@ -25,7 +43,7 @@ class HomeController : RouteCollection {
     
         let view = try req.view()
         
-        return view.render("moduleSelector", ModuleSelectorContext(station: station, permutations: permutations))
+        return view.render("moduleSelector", ModuleSelectorContext(station: station, permutations: permutations, options: loadOptions ))
     }
     
     func getLogHandler(_ req: Request) throws -> Future<View> {
