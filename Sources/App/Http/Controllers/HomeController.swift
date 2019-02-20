@@ -15,35 +15,44 @@ class HomeController : RouteCollection {
         struct ModuleSelectorContext : Encodable {
            var station : SpaceStation
            var permutations : [ModulePermuation]
-            var options :LoadOptions
+           var showIntro : Bool
         }
         
         struct LoadOptions: Content {
             var skip: Bool?
         }
         
-         var loadOptions = LoadOptions(skip: false)
+        var loadOptions = LoadOptions(skip: false)
+        var showIntro = true
         
-        do{
+        do {
+            
             loadOptions = try req.query.decode(LoadOptions.self)
             
-            if(loadOptions.skip == nil){ loadOptions.skip = false }
+            if let skip = loadOptions.skip  {
+                showIntro = !skip
+            }
+            
             
         } catch {
-           print("error")
-        }
+            
+           print("error decoding params")
         
-        print(loadOptions)
+        }
         
         let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
         
         let station = SpaceStation(stationConfig)
         
+        if(station.completedModules > 0){
+            showIntro = false
+        }
+        
         let permutations = ModuleTypePermutations.shared.modulePermutationsFor(station: station, request: req)
     
         let view = try req.view()
         
-        return view.render("moduleSelector", ModuleSelectorContext(station: station, permutations: permutations, options: loadOptions ))
+        return view.render("moduleSelector", ModuleSelectorContext(station: station, permutations: permutations, showIntro: showIntro ))
     }
     
     func getLogHandler(_ req: Request) throws -> Future<View> {

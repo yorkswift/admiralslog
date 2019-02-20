@@ -1,1 +1,86 @@
-#embed("Embeds/LogActions")
+
+
+<div class="menu columns">
+
+    <div class="column__half--left">
+
+        <div class="padding-medium border-white">
+
+        <h3 class="menu__title">Welcome to The Eatery At The Terminus Of All Things.</h3>
+
+            <div class="columns">
+
+                <div class="column__half">
+                    
+                    <div class="border-white-right">
+                        <h4 class="menu__course__title">Appetiser</h4>
+
+                        <p class="menu__course__text">A delicate broth of liquid helium, scented with an exquisite reduction of wheatgrass, fennel, pine nut oil and Nimbrillian Vapour Moths. Served in a miniature centrifuge and chilled to exactly zero degrees kelvin.</p>
+                    </div>
+                    <div class="border-white-right">
+                        <h4 class="menu__course__title">Main</h4>
+
+                        <p class="menu__course__text">Quantum Beef. In an alternate universe, this could be beef. Currently, we think it may be a piece of concrete served with a thin dusting of insulating foam. Pan seared and garnished with a rich jus.</p> 
+                    </div>
+                    <div class="menu__course__inverted">
+                        <h4 class="menu__course__title">Dessert</h4>
+
+                        <p class="menu__course__text">Buck-Mint-Ster Fuller: A geodesic spheroid of crystalline sugar-work, flavoured with peppermint, encasing a fully realised biome of edible chocolate infused flora and a single live gecko. Gecko available in a choice of flavours, please ask your server for more details.</p>
+                    </div>
+                
+                </div>
+
+                <div class="column__half ">
+
+                    <div class="menu__course__inverted">
+                        <p class="menu__course__text">Open from 9:00am to eternity</p>
+
+                        <p class="menu__course__text">Monday — Thursday</p>
+                    </div>
+
+                    <div class="border-white-bottom">
+                        <h4 class="menu__course__title">Wine Pairing</h4>
+
+                        <p class="menu__course__text">1963 Vin du Starkiller Sauvignon Blanc: A subtle, young vintage, a little on the light side but with hidden depths.</p>
+                    </div>      
+
+                    <div class="border-white-bottom">
+                        <h4 class="menu__course__title">Recommended Cocktail</h4>
+
+                        <p class="menu__course__text">The Elysian Field: Classic, bold flavours. Well meaning and interesting ideas, muddled up with a heavy dose of gin and exoskeletons.</p>
+
+                    </div>
+
+                    <div>
+                        <br/>
+                        <p class="menu__course__text">To find us, search for 'The End' on Galaxy Maps.</p>
+    
+                    </div>
+                </div>
+
+           </div>
+
+        </div>
+
+    </div>
+
+    <div class="column__half--right">
+        <div class="padding-medium border-white">
+
+            <div class="menu">
+                <p class="menu__course__text">Coffee will be served after the meal and before tonights performance, where an electromagnetic railgun will deliver a payload of approximately one hundred and eighty thousand megatons, coated in fissile material designed to generate a coloured corona, into the heart of a star.</p>
+
+                <p class="menu__course__text">Patrons are warned not to look directly into the star at any time during tonight's performance, as doing so may cause irreversible blindness and\or visions of the many myriad futures that may branch from this one.</p>
+            
+                <p class="menu__course__text">This includes the comprehension of the singular path by which humanity might continue on in some form. Knowledge of this has been clinically proven to cause shortness of breath, trouble sleeping and extremely depressing conversations at dinner parties.</p>
+             </div>
+        </div>
+         
+        <p class="menu__course__inverted menu__thankyou">We thank you for attending, and hope that you enjoy your evening.</p>
+        
+        #embed("Embeds/LogActions")
+    </div>
+
+   
+</div>
+
