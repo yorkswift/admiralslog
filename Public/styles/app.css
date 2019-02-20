@@ -4,7 +4,7 @@ body, html {
     padding: 0;
 }
 
-body,h2,input {
+body,h2,input, pre {
     font-family: Monaco, monospace;
     font-size: 12px;
 }
@@ -540,4 +540,20 @@ body,h2,input {
 .menu__thankyou {
     text-align: center;
     padding: 5em !important;
+}
+
+.datalog__fragment {
+    white-space: pre-wrap; 
+}
+
+.datalog__fragment--highlight {
+    color:#9dcb8c;
+}
+
+.datalog__fragment--meta {
+    color:#a5ddec;
+}
+
+.datalog__fragment--warning {
+    color:#f47f52;
 }

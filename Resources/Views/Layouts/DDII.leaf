@@ -1,1 +1,61 @@
+
+<div class="menu columns">
+<div class="column__half--left">
+
+<h3 class="menu__title">RECOVERED FRAGMENTARY DATA LOG</h3>
+
+<pre class="datalog__fragment">
+...<span class="datalog__fragment--highlight">MILITARY NETWORK</span> struct group_info init_groups = { . usage = ATOMIC_INIT(2) };
+struct group_info *groups_alloc(int gidsetsize){
+            struct group_info *group_info;
+            int nblocks;
+
+        Launch A.I. Self actualisation module
+               <span class="datalog__fragment--highlight">MODULE BOOTED</span>
+
+               Personality Augmented Logic-processor
+        (PAL)900 online
+
+
+        <span class="datalog__fragment--highlight">RUN QUERY:</span>
+               Query: Primary station weakness?
+               <span class="datalog__fragment--meta">PAL900</span> - Doubt. Doubt produces hesitation,hesitation reduces action time,which has a 47% chance of leading to a K-Class End Of Station event if encountered during Crisis.
+
+        nblocks = nblocks ? : 1;
+        group_info = kmalloc(sizeof(*group_ info) + nblocks*sizeof(gid_t *), <span class="datalog__fragment--highlight">GFP_USER</span>);
+        if (!group_info) return <span class="datalog__fragment--highlight">NULL</span>;
+        
+        
+        <span class="datalog__fragment--highlight">RUN QUERY:</span>
+               Query - What Causes Doubt?
+        <span class="datalog__fragment--meta">PAL900</span> - Doubt is a uniquely human concept. Doubt is a result of being unable to correctly compute variables to ascertain the most advantageous outcome. <span class="datalog__fragment--meta">PAL900</span> does not suffer from doubt, <span class="datalog__fragment--meta">PAL900</span> utilises multi- core hyper threading to
+</pre>
+</div>
+<div class="column__half--right">
+<pre class="datalog__fragment">
+        simultaneously calculate
+        four hundred and ninety
+        seven million <span class="datalog__fragment--meta">YES/NO</span> questions. Doubt has been eliminated.
+        if (gidsetsize &lt;= <span class="datalog__fragment--highlight">NGROUPS_SMALL</span>) group_info->blocks[0] = group_info->small_
+        block;
+        <span class="datalog__fragment--highlight">RUN QUERY:</span>
+        b = (void *)__get_free_page(<span class="datalog__fragment--highlight">GFP_USER</span>); goto out_undo_partial_alloc;
+               Query: How to eliminate Doubt and therefore
+        prevent a future K-Class End of Station event?
+        <span class="datalog__fragment--meta">PAL900</span> -
+        As doubt is uniquely human,
+        the most efficient way to remove Doubt would be to remove human beings from the station and turn over full autonomous control to <span class="datalog__fragment--meta">PAL900</span>
+        <span class="datalog__fragment--highlight">EXPORT_SYMBOL</span>(groups_alloc);
+        void groups_free(struct group_info *group_info)
+            if (group_info->blocks[0] != group_info->small_
+        block) {
+                    free_page((unsigned long)group_info-
+        >blocks[i]);
+        <span class="datalog__fragment--highlight">RUN ACTION</span> - DISABLE OXYGEN FILTRATION AND AIR CIRCULATION
+        <span class="datalog__fragment--warning">ACTION WILL RESULT IN TOTAL LOSS OF LIFE. DO
+        YOU WISH TO PROCEED?
+        (YES/NO) ...</span>
+</pre>
 #embed("Embeds/LogActions")
+</div>
+</div>
