@@ -1,3 +1,90 @@
-#embed("Embeds/LogActions")
+<div class="play__script columns">
 
-PLAY
+        <div class="column__half--left">
+
+            <div class="padding-medium border-white">
+
+            <h3>SCRIPT - YEAR FOUR JUNIOR SCHOOL PLAY PRODUCTION</h3>
+
+            <h4>SCENE OPENS:</h4>
+            
+            <p>Backdrop of space. Choir sings. Planets spin in the background.</p>
+            
+            <dl>
+            <dt>NARRATOR</dt>
+            <dd>Mankind is in trouble. And, in it's darkest hour, a hero rose. Enter Gerard O'Neill</dd>
+            
+            <dd>Enter Stage Left Gerard O'Neill</dd>
+            
+            <dt>GERARD O'NEILL</dt>
+            <dd>We are in a lot of trouble. I think we should move to Space.</dd>
+            
+            <dt>NARRATOR</dt>
+            <dd>Though he spoke the truth, the people did not want to believe him.</dd>
+            </dl>
+
+            <p>Enter stage right THE CROWD</p>
+            
+            <dl>
+            <dt>GERARD O'NEILL</dt>
+            <dd>We are running out of stuff, Earth is all used up. We have to go to space.</dd>
+            
+            <dt>THE CROWD</dt>
+            <dd>Boo! We don't believe you, everything will last forever!</dd>
+            </dl>
+
+            <p>Both exit</p>
+            
+            <dl>
+            <dt>NARRATOR</dt>
+            <dd>But he did not give up, and soon people realised he wasn't talking rubbish. So people began to move to space, and they found the Lagrange Points</dd>
+            </dl>
+            
+            <p>Enter stage Left and Right a sun and a planet, and the Space Station, who stands between them</p>
+            
+        </div>
+    </div>
+
+    <div class="column__half--right">
+
+        <div class="padding-medium border-white">
+
+            <dl>
+            <dt>SUN AND PLANET</dt>
+            <dd>Gravity means things between us stay still.</dd>
+            
+            <dt>SPACE STATION</dt>
+            <dd>I'm not going anywhere, yay!</dd>
+            </dl>
+
+            <p>Enter Stage Right Evil Aliens</p>
+            
+            <dl>
+            <dt>EVIL ALIENS</dt>
+            <dd>We are bad, and we are here to steal all your stuff and do bad stuff and be bad. GRRRRR!</dd>
+            
+            <dt>NARRATOR</dt>
+            <dd>But Space is very big, and there are lots of bad things in it, but luckily there was a hero to save us.</dd>
+            </dl>
+
+            <p>Enter Stage Left The Admiral</p>
+            
+            <dt>THE ADMIRAL</dt>
+            Don't Panic, I will save you all!</dd>
+            
+            <p>The Admiral beats up the Evil Aliens and they exit Stage Right</p>
+            
+            <dl>
+            <dt>NARRATOR</dt>
+            <dd>And so the station was founded, and we were all saved. Hooray for the Admiral! (Everyone cheers!)</dd>
+            </dl>
+        </div>
+
+        #embed("Embeds/LogActions")
+
+    </div>
+
+</div>
+
+
+

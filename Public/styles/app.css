@@ -8,6 +8,9 @@ body,h2,input, pre {
     font-family: Monaco, monospace;
     font-size: 12px;
 }
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
 
 .reset-fieldset {
     border: none;
@@ -556,4 +559,8 @@ body,h2,input, pre {
 
 .datalog__fragment--warning {
     color:#f47f52;
+}
+
+.play__script dt {
+    color:#a5ddec;
 }
