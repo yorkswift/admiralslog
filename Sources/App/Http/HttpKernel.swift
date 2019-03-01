@@ -12,11 +12,8 @@ class HttpKernel {
     
     public func defaultRoutes() throws {
         
-        let homeController = HomeController()
-        try routes.register(collection: homeController)
-
-        let moduleController = ModuleController()
-        try routes.register(collection: moduleController)
+        let logController = LogController()
+        try routes.register(collection: logController)
         
     }
 

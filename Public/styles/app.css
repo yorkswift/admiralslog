@@ -12,6 +12,9 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
 }
 
+a , a img { outline : none; }
+img{ border : 0; }
+
 .reset-fieldset {
     border: none;
     margin: 0;

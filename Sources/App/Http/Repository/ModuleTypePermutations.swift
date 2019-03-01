@@ -2,7 +2,6 @@
 import Foundation
 import Vapor
 
-
 struct ModulePermuation : Encodable {
     
     var moduleInitial : String
@@ -89,7 +88,8 @@ class ModuleTypePermutations {
                         template: "Modules/" + module.moduleType.rawValue,
                         colourHex : module.colourHex,
                         needsCategory : module.needsCategory,
-                        anchors : categoryAnchors)
+                        anchors : categoryAnchors
+                )
                 
             }
         

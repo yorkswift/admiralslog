@@ -50,6 +50,14 @@ struct SpaceStation {
             }).sorted())
         
     }
+    var points : Int {
+        
+        if(isComplete){
+            return PointsRepository.shared.calculatePoints(initials).rawValue
+        } else {
+            return 0
+        }
+    }
     
     var sortedCategories : String {
         if(isComplete){
@@ -67,19 +75,21 @@ struct SpaceStation {
                 
                 if let category = module.moduleCategory {
                     
-                  //  return categoryString + " - <span style='color:" + category.colourHex + "'>" + category.rawValue.uppercased() + "</span>";
-                    
                     return categoryString + " - " + category.rawValue.uppercased();
                     
                 } else {
+                    
                     return categoryString
+                    
                 }
                 
             })
             
             
         } else {
+            
             return ""
+        
         }
         
     }
@@ -104,16 +114,20 @@ extension SpaceStation: Encodable {
         case sortedCategories
         case initials
         case logLocation
+        case points
     }
     func encode(to encoder: Encoder) throws {
+        
         var container = encoder.container(keyedBy: CodingKeys.self)
+        
         try container.encode(modules, forKey: .modules)
         try container.encode(categories, forKey: .categories)
         try container.encode(isComplete, forKey: .isComplete)
         try container.encode(completedModules, forKey: .completedModules)
         try container.encode(sortedCategories, forKey: .sortedCategories)
         try container.encode(initials, forKey: .initials)
-         try container.encode("Stories/"+initials, forKey: .logLocation)
+        try container.encode("Stories/"+initials, forKey: .logLocation)
+        try container.encode(points, forKey: .points)
         
     }
     

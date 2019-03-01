@@ -12,7 +12,7 @@ lab2__background
 
     <div class="entry__modules"><h2 class="inverted__text">#(station.initials) #(station.sortedCategories)</h2></div>
 
-    <div class="entry__points"><span class="inverted__text">1234 POINTS</span></div>
+    <div class="entry__points"><span class="inverted__text">#(station.points) POINTS</span></div>
 
     #if(contains(customTemplates,station.initials)) {
 

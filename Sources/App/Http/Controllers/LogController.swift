@@ -1,7 +1,7 @@
 
 import Vapor
 
-class HomeController : RouteCollection {
+class LogController : RouteCollection {
     
     func boot(router: Router) throws {
         
