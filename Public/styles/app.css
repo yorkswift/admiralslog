@@ -33,7 +33,7 @@ img{ border : 0; }
     width: auto;
     height: auto;
     z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-75%) translateY(-50%);
     transition: 1s opacity;
 }
 
@@ -264,11 +264,14 @@ img{ border : 0; }
 @media only screen and (min-width: 1024px) {
 
     .lab2__background {
-        background: url(../images/computerlab_background.png) no-repeat center center fixed;
+        background: url(https://static.wixstatic.com/media/e65a0c_98cb48a565ee4112a5a46de112979fe9~mv2.png) no-repeat center center fixed;
         background-size: cover;
         background-color:#000;
     }
 
+    .lab__video { 
+        transform: translateX(-50%) translateY(-50%);
+    }
     
     .padding-large {
         padding:3em;
