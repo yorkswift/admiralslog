@@ -34,7 +34,7 @@ img{ border : 0; }
     height: auto;
     z-index: -100;
     transform: translateX(-75%) translateY(-50%);
-    transition: 1s opacity;
+
 }
 
 .modules {
