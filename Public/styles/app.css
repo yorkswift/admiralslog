@@ -20,15 +20,8 @@ img{ border : 0; }
     margin: 0;
     padding: 0;
 }
-.lab__background {
+.lab__background , .lab2__background {
     background: #000;
-}
-
-.lab2__background {
-    
-    background: url(../images/computerlab_background.png) no-repeat center center fixed;
-    background-size: cover;
-    background-color:#000;
 }
 
 .lab__video { 
@@ -46,7 +39,7 @@ img{ border : 0; }
 
 .modules {
     color: #ffffff;
-    width: 74%;
+    width: 100%;
     display: block;
     
     -webkit-transition: opacity 0.6s cubic-bezier(.83,.16,.19,.79);
@@ -71,6 +64,10 @@ img{ border : 0; }
     text-decoration: none;
 }
 
+.inverted__text-warning {
+    background:#f47f52;
+}
+
 
 .modules legend {
     position: relative;
@@ -81,7 +78,7 @@ img{ border : 0; }
 }
 
 .modules__legend h2 {
-    line-height: 3em;
+    line-height: 2.2em;
     padding: 0;
 }
 .modules__legend dt {
@@ -98,15 +95,14 @@ img{ border : 0; }
 }
 
 .modules__start {
-    font-family: Monaco, monospace;
     display: block;
     width:100%;
-    background: #fff;
+    background: #9dcb8c;
     border: none;
     padding: .5em;
-    margin-top: 5em;
-    line-height: 2em;
     cursor:pointer;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 .modules__selector__wrapper {
@@ -127,18 +123,19 @@ img{ border : 0; }
 
 .modules__legend_wrapper {
     width: 100%;
+    padding-top: 1em;
 }
 
 .padding-medium {
     padding:2em;
 }
-
 .padding-large {
-    padding:3em;
+    padding:1em;
 }
 
 .hidden {
      opacity: 0;
+     display: none;
 }
 
 .border-white {
@@ -170,33 +167,17 @@ img{ border : 0; }
     text-decoration: none;
 }
 
-@media only screen and (min-width: 1024px) {
-
-    .modules {
-        display: flex;
-    }
-    
-    .modules__selector__wrapper {
-        width: 66%;
-    }
-    .modules__legend_wrapper {
-        width: 33%;
-        padding: 0 0 2em 2em;
-    }
-  }
-
 
 .entry {
     color: #ffffff;
-    display: flex;
-    flex-wrap: wrap;
-    width: 74%;
-
+    display: block;
+    width: 100%;
 }
 
 .entry__modules {
-    width: 80%;
+    width: 100%;
 }
+
 .entry__modules h2 {
 
     line-height: 3em;
@@ -206,10 +187,10 @@ img{ border : 0; }
 }
 
 .entry__points {
-    width: 17%;
+    width: 100%;
     text-align: right;
     line-height: 3em;
-    padding-left: 3%;
+    padding-bottom: 2em;
 }
 
 .entry__points span {
@@ -219,11 +200,12 @@ img{ border : 0; }
 }
 
 .entry__text {
-    width: 60%;
+    width: 100%;
     line-height: 2em;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
 
 .entry__text p {
     margin:  0 0 2em;
@@ -241,8 +223,9 @@ img{ border : 0; }
 }
 
 .entry__graphic {
-    width: 37%;
-    padding-left: 3%;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 1em;
 }
 
 .entry__graphic img {
@@ -250,10 +233,14 @@ img{ border : 0; }
 }
 
 .entry__actions  {
-    margin: 2em 0 0;
+    margin: 0 0 1em;
     width: 100%;
     display: flex;
     cursor: pointer;
+}
+
+.log__actions  {
+    margin-top:1em;
 }
 
 .entry__action-controls {
@@ -273,6 +260,61 @@ img{ border : 0; }
 .entry__action span {
     display: block;
 }
+
+@media only screen and (min-width: 1024px) {
+
+    .lab2__background {
+        background: url(../images/computerlab_background.png) no-repeat center center fixed;
+        background-size: cover;
+        background-color:#000;
+    }
+
+    
+    .padding-large {
+        padding:3em;
+    }
+
+    .modules {
+        display: flex;
+        width:74%;
+    }
+    
+    .modules__selector__wrapper {
+        width: 66%;
+    }
+    .modules__legend_wrapper {
+        width: 33%;
+        padding: 0 0 2em 2em;
+    }
+
+    .entry {
+        display: flex;
+        flex-wrap: wrap;
+        width: 74%;
+    
+    }
+
+    .entry__modules {
+        width: 80%;
+    }
+
+    .entry__points {
+        padding-left: 3%;
+        width: 17%;
+        padding-bottom: 0;
+    }
+
+    .entry__text {
+        width: 60%;
+    }
+
+    .entry__graphic {
+        width: 37%;
+        padding-left: 3%;
+        padding-top:0;
+    }
+}
+
 .underline {
     padding-bottom: 2px;
     border-bottom: 2px dashed #fff;
@@ -301,6 +343,9 @@ img{ border : 0; }
 .column__half, .column__half--left, .column__half--right {
     width: 100%;
 }
+.column__half--right {
+    padding-top: 2em;
+}
 
 @media only screen and (min-width: 1024px) {
 
@@ -319,6 +364,8 @@ img{ border : 0; }
     .column__half--right{
         width: 48%;
         margin-left: 2%;
+        padding-top: 0;
+        
     }
 
 }

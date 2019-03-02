@@ -1,0 +1,12 @@
+<div class="entry__actions">
+
+        <div class="entry__action entry__action-controls">
+            <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />
+        </div>
+    
+        <div class="entry__action entry__action-menu">
+            <span class="inverted__text inverted__text-warning #if(showIntro){hidden}"><a href="/?skip">RESET</a></span>
+        </div>
+    
+    </div>
+    

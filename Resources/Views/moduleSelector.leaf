@@ -1,13 +1,13 @@
 #set("title") { Admiral's Log }
 
 #set("headerExtra"){
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
 }
 
 #set("backgroundClass"){
-#if(showIntro){lab__background} else {lab2__background}
+    #if(showIntro){lab__background} else {lab2__background}
 }
 
 #set("body") {
@@ -51,42 +51,37 @@
 
             #for(category in station.categories) {
 
-<input type="radio" id="#(module.moduleInitial)_#(category.initial)" name="#(module.moduleInitial)" value="#(category.initial)" #if(category.initial == module.categoryInitial){ checked="checked"}>
-                    <label for="#(category.name)">#(category.name)</label>
+                <input type="radio" id="#(module.moduleInitial)_#(category.initial)" name="#(module.moduleInitial)" value="#(category.initial)" #if(category.initial == module.categoryInitial){ checked="checked"}>
+                <label for="#(category.name)">#(category.name)</label>
 
             }
- </fieldset>
+        </fieldset>
 
         }
 
     }
-</div>
+    </div>
 
 
     </div>
 
  <div class="modules__legend_wrapper">
+
+    #embed("Embeds/ModuleActions")
+
     <fieldset class="reset-fieldset modules__legend">
 
         <h2 class="inverted__text">KEY</h2>
         <dl>
             #for(category in station.categories) {
-<dt style="
-    color:#(category.colourHex);
-    border-color:#(category.colourHex);
-">#(category.name)</dt><dd>#(category.initial)</dd>
+<dt style="color:#(category.colourHex); border-color:#(category.colourHex);">#(category.name)</dt><dd>#(category.initial)</dd>
                 }
         </dl>
     <div>
 
-    <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />
-
     </fieldset>
     
-    <div class="modules__reset inverted__text #if(station.isComplete){hidden}">
-      <a href="/">RESET</a>
-    </div>
-
+    
 </div>
 	</form>
 </div>
