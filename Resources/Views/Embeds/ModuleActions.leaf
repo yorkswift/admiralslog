@@ -5,7 +5,7 @@
         </div>
     
         <div class="entry__action entry__action-menu">
-            <span class="inverted__text inverted__text-warning #if(showIntro){hidden}"><a href="/?skip">RESET</a></span>
+            <span class="inverted__text inverted__text-warning #if(station.completedModules == 0){hidden}"><a href="/?skip">RESET</a></span>
         </div>
     
     </div>
