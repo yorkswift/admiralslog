@@ -7,13 +7,13 @@
 }
 
 #set("backgroundClass"){
-    #if(showIntro){lab__background} else {lab2__background}
+    #if(showIntro){background__default} else {background__lab}
 }
 
 #set("body") {
 
 #if(showIntro){
-<video class="lab__video" id="bgvid" playsinline autoplay muted onended="introEnded();">
+<video class="lab__video" id="bgvid" playsinline autoplay muted  onplay="introStarted();" onended="introEnded();">
     <source src="https://video.wixstatic.com/video/e65a0c_40deb7a607de46b98b958cbf32280f8f/480p/mp4/file.mp4" type="video/mp4">
 </video>
 }

@@ -1,7 +1,7 @@
 #set("title") { Admiral's Log }
 
 #set("backgroundClass"){
-lab2__background
+background__lab
 }
 
 #set("body") {

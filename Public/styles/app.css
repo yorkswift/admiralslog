@@ -20,21 +20,21 @@ img{ border : 0; }
     margin: 0;
     padding: 0;
 }
-.lab__background , .lab2__background {
+.background__default , .background__lab {
     background: #000;
 }
 
+
 .lab__video { 
+    display: initial;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    right:-76%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
+    /* transform: translateX(-100%) translateY(-50%); */
     z-index: -100;
-    transform: translateX(-75%) translateY(-50%);
-
 }
 
 .modules {
@@ -261,15 +261,23 @@ img{ border : 0; }
     display: block;
 }
 
+@media only screen and (min-width: 768px) {
+    .lab__video { 
+        right: auto;
+    }
+}
+
 @media only screen and (min-width: 1024px) {
 
-    .lab2__background {
+    .background__lab {
         background: url(https://static.wixstatic.com/media/e65a0c_98cb48a565ee4112a5a46de112979fe9~mv2.png) no-repeat center center fixed;
         background-size: cover;
         background-color:#000;
     }
 
     .lab__video { 
+        top: 50%;
+        left: 50%;
         transform: translateX(-50%) translateY(-50%);
     }
     
