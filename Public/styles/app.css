@@ -26,7 +26,6 @@ img{ border : 0; }
 
 
 .lab__video { 
-    display: initial;
     position: fixed;
     right:-76%;
     min-width: 100%;
@@ -150,7 +149,7 @@ img{ border : 0; }
 }
 
 .border-white-bottom{
-    border-bottom: 1px solid #fff;
+    border-bottodisplaym: 1px solid #fff;
 }
 
 .modules__inputs {

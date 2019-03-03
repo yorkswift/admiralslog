@@ -3,7 +3,7 @@
 <head>
     <title>#get(title)</title>
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="/styles/app.css?20190303">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     #get(headerExtra)
 </head>
