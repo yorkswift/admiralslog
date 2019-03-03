@@ -6,6 +6,7 @@ introEnded = function(){
     if($('.modules').hasClass('hidden')){
 
         $('body').addClass('background__lab');
+        $('.lab__video').addClass('hidden');
         $('.modules').removeClass('hidden');
         clearIntroTimer();
     }
