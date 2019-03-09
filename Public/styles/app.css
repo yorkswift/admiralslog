@@ -454,7 +454,7 @@ img{ border : 0; }
 
 .conversation__speech {
     padding: 1em;
-    margin: 2em;
+    margin: 2em 0;
     position: relative;
     text-transform: uppercase;
 }
@@ -462,7 +462,6 @@ img{ border : 0; }
 .conversation__speech--left {
     color: #F3D777;
     border: 2px #F3D777 solid;
-    margin-right: 6em;
 }
 
 .conversation__speech--left:after {
@@ -482,8 +481,20 @@ img{ border : 0; }
 
 .conversation__speech--right {
     border: 2px #fff solid;
-    margin-left: 6em;
 }
+
+@media only screen and (min-width: 1024px) {
+
+    .conversation__speech {
+        margin: 2em;
+    }
+    .conversation__speech--left {
+        margin-right: 6em;
+    }
+    .conversation__speech--right {
+     margin-left: 6em;
+    }
+}   
 
 .conversation__speech--right:after {
 	content: '';
@@ -552,18 +563,38 @@ img{ border : 0; }
     clear: both;
 }
 .conversation__post__text {
-    margin:0 0 2em 6em;
+    margin:0 0 2em 0;
+    word-break: break-all;
 
 }
 .conversation__comment .conversation__comment__text {
-    margin:0 0 0 6em;
+  
     color:#F3D777;
     min-height: 4em;
+    word-break: break-all;
+    
 }
 
 .conversation__comment {
-    padding-left:3em;
     margin: 0 0 2em;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .conversation__post__text {
+        margin:0 0 2em 6em;
+        word-break: normal;
+    }
+
+    .conversation__comment {
+        padding-left:3em;
+        word-break: normal;
+    }
+    
+    .conversation__comment .conversation__comment__text {
+        margin:0 0 0 6em;
+        word-break: normal;
+    }
 }
 
 .reviews__title{

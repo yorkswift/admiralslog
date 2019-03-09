@@ -3,7 +3,14 @@
 #set("headerExtra"){
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="./scripts/app.js?20190303"></script>
+    <script type="text/javascript" src="./scripts/app.js?20190309"></script>
+    #if(audio){
+    
+        <script type="text/javascript">var audio_url = '#(audio)';</script>
+
+        <script type="text/javascript" src="./scripts/log.js?20190309"></script>
+
+    }
 }
 
 #set("backgroundClass"){

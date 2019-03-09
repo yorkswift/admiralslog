@@ -1,6 +1,6 @@
-<div class="conversation two_col">
+<div class="conversation columns">
 
-    <div class="conversation__col">
+    <div class="column__half--left">
 
         <div class="">
 
@@ -103,7 +103,7 @@
         </div>
 
     </div>
-    <div class="conversation__col--right">
+    <div class="column__half--right">
 
         <div class="">
 

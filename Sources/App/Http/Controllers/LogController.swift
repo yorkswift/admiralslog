@@ -16,6 +16,7 @@ class LogController : RouteCollection {
            var station : SpaceStation
            var permutations : [ModulePermuation]
            var showIntro : Bool
+            var audio: String
         }
         
         struct LoadOptions: Content {
@@ -49,10 +50,12 @@ class LogController : RouteCollection {
         }
         
         let permutations = ModuleTypePermutations.shared.modulePermutationsFor(station: station, request: req)
+        
+        let audios = AudioRepository.shared
     
         let view = try req.view()
         
-        return view.render("moduleSelector", ModuleSelectorContext(station: station, permutations: permutations, showIntro: showIntro ))
+        return view.render("moduleSelector", ModuleSelectorContext(station: station, permutations: permutations, showIntro: showIntro, audio: audios.urlForAudio(with:"INTRO") ?? "" ))
     }
     
     func getLogHandler(_ req: Request) throws -> Future<View> {

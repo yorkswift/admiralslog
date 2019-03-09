@@ -1,7 +1,13 @@
 <div class="entry__actions">
 
+        
         <div class="entry__action entry__action-controls">
-            <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />
+
+                #if(audio && !station.isComplete){
+                    <span class="modules__start inverted__text audio__control-play" id="audio__control"><span class="audio__state">PLAY</span> WELCOME AUDIO</span>
+                } 
+                <input class="modules__start #if(!station.isComplete){hidden}" type="submit" value="RETREIVE LOG" />
+           
         </div>
     
         <div class="entry__action entry__action-menu">
