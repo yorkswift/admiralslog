@@ -63,6 +63,7 @@ class LogController : RouteCollection {
             var cdn : String
             var bitmapGraphics : [String]
             var customTemplates : [String]
+            var audio: String
         }
         
         let stationConfig = try req.query.decode(SpaceStationConfiguration.self)
@@ -80,12 +81,15 @@ class LogController : RouteCollection {
         let graphics = GraphicsRepository.shared
         let templates = TemplateRepository.shared
         
+        let audios = AudioRepository.shared
+        
         return view.render("log", LogContext(
                 station: station,
                 logNumber: logNumber,
                 cdn: graphics.cdn,
                 bitmapGraphics: graphics.bitmap,
-                customTemplates : templates.customLayout
+                customTemplates : templates.customLayout,
+                audio: audios.urlForAudio(with: station.initials) ?? ""
                 ))
     }
     

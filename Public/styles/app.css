@@ -246,6 +246,28 @@ img{ border : 0; }
     width: 60%;
 }
 
+#audio__control {
+    background: #a5ddec;
+}
+.audio__control-pause {
+    animation: colorchange 3s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes colorchange
+{
+  0%   {background: #a5ddec;}
+  50%  {background: #00c8ff}
+  100%  {background: #a5ddec;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+    0%   {background: #a5ddec;}
+    50%  {background:#00c8ff;}
+    100%  {background: #a5ddec;}
+}
+
 .entry__action-menu {
     width: 30%;
     padding-left: 10%;
@@ -258,6 +280,10 @@ img{ border : 0; }
 
 .entry__action span {
     display: block;
+}
+
+.entry__action span.audio__state {
+    display: inline;
 }
 
 @media only screen and (min-width: 768px) {

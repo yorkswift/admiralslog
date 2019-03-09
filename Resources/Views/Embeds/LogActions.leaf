@@ -1,8 +1,10 @@
 <div class="entry__actions log__actions">
 
+    #if(audio){
     <div class="entry__action entry__action-controls">
-        <span class="inverted__text hidden">PLAY AUDIO RECORDING</span>
+        <span class="inverted__text audio__control-play" id="audio__control"><span class="audio__state">PLAY</span> AUDIO RECORDING</span>
     </div>
+    }
 
     <div class="entry__action entry__action-menu">
         <span class="inverted__text inverted__text-warning"><a href="/?skip">EXIT LOG</a></span>

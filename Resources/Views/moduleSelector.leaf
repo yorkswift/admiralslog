@@ -69,7 +69,7 @@
 
     #embed("Embeds/ModuleActions")
 
-    <fieldset class="reset-fieldset modules__legend">
+    <fieldset class="reset-fieldset modules__legend padding-medium">
 
         <h2 class="inverted__text">KEY</h2>
         <dl>
