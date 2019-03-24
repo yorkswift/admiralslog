@@ -87,6 +87,14 @@
     <div>
 
     </fieldset>
+
+    <div class="entry__actions">
+
+        <div class="entry__action entry__action-menu">
+            <span class="inverted__text"><a href="https://www.grizzly.games" target="_self">EXIT</a></span>
+        </div>
+
+    </div>
     
     
 </div>
