@@ -1,6 +1,8 @@
 import Foundation
 import XCTest
 
+
+// Expected Results
 enum Level : Int {
     
     case FourSame = 2200
@@ -15,6 +17,7 @@ enum Level : Int {
     
 }
 
+// Method
 func calculatePoints(_ initials:String) -> Level {
     
     if(initials.count != 4){ return .None }
@@ -65,17 +68,46 @@ func calculatePoints(_ initials:String) -> Level {
     
 }
 
-//ADEIR
 
-calculatePoints("AAAA").rawValue
+//Tests
 
-calculatePoints("ADDD").rawValue
+class PointsTest: XCTestCase {
 
-calculatePoints("EERA").rawValue
+    func testFourSame() {
+        
+        XCTAssertEqual(calculatePoints("AAAA").rawValue,2200)
+        
+    }
+    
+    func testThreeSame(){
 
-calculatePoints("EEDD").rawValue
+        XCTAssertEqual(calculatePoints("ADDD").rawValue,1400)
+    
+    }
 
-calculatePoints("ADER").rawValue
+    func testOnePair(){
+        
+        XCTAssertEqual(calculatePoints("EERA").rawValue,3000)
+    
+    }
 
-calculatePoints("B").rawValue
+    func testTwoPairs(){
+        XCTAssertEqual(calculatePoints("EEDD").rawValue,1800)
+    }
+    
+    func testFourDifferent(){
+        
+        XCTAssertEqual(calculatePoints("ADER").rawValue,3000)
+    }
+    
+    func testCorrupt(){
+        
+        XCTAssertEqual(calculatePoints("").rawValue,0)
+        XCTAssertEqual(calculatePoints("B").rawValue,0)
+        XCTAssertEqual(calculatePoints("AAAAA").rawValue,0)
+        
+    }
 
+}
+
+PointsTest.defaultTestSuite.run()
