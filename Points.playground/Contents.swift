@@ -26,14 +26,13 @@ func calculatePoints(_ initials:String) -> Level {
     if(fourSame == initials){ return .FourSame }
     
     var maximumDuplicateCount = 0
-
+    
     let duplicates = initials.reduce([Character:Int]()) { (duplicates, letter) -> [Character: Int] in
         
         var d = duplicates
-        
         guard let previousCount = d[letter] else {
             d[letter] = 1
-            maximumDuplicateCount = 1
+            if(maximumDuplicateCount == 0){ maximumDuplicateCount = 1 }
             return d
         }
         
@@ -47,23 +46,25 @@ func calculatePoints(_ initials:String) -> Level {
     }
     
     switch(maximumDuplicateCount){
-        case 3:
-            
-            return .ThreeSame
+    case 3:
         
-        case 2:
-    
-            if let _ = duplicates.values.first(where: { (count) -> Bool in
-                return count != 2
-            }){
-                return .OnePair
-            }
-            
-          return .TwoPairs
+        return .ThreeSame
         
-        default:
+    case 2:
+        
+        if let _ = duplicates.values.first(where: { (count) -> Bool in
+            return count != 2
+        }){
             
-            return .FourDifferent
+            
+            return .OnePair
+        }
+        
+        return .TwoPairs
+        
+    default:
+        
+        return .FourDifferent
     }
     
 }
@@ -75,37 +76,50 @@ class PointsTest: XCTestCase {
 
     func testFourSame() {
         
-        XCTAssertEqual(calculatePoints("AAAA").rawValue,2200)
+        assert("AAAA", isLevel: .FourSame)
         
     }
     
     func testThreeSame(){
-
-        XCTAssertEqual(calculatePoints("ADDD").rawValue,1400)
+        
+         assert("ADDD", isLevel: .ThreeSame)
+         assert("DDDE", isLevel: .ThreeSame)
     
     }
 
     func testOnePair(){
         
-        XCTAssertEqual(calculatePoints("EERA").rawValue,3000)
+        assert("EERA", isLevel: .OnePair)
+        assert("REEA", isLevel: .OnePair)
+        assert("RAEE", isLevel: .OnePair)
     
     }
 
     func testTwoPairs(){
-        XCTAssertEqual(calculatePoints("EEDD").rawValue,1800)
+        
+        assert("EEDD", isLevel: .TwoPairs)
+        assert("AABB", isLevel: .TwoPairs)
+        
     }
     
     func testFourDifferent(){
         
-        XCTAssertEqual(calculatePoints("ADER").rawValue,3000)
+         assert("ADER", isLevel: .FourDifferent)
+
     }
     
     func testCorrupt(){
         
-        XCTAssertEqual(calculatePoints("").rawValue,0)
-        XCTAssertEqual(calculatePoints("B").rawValue,0)
-        XCTAssertEqual(calculatePoints("AAAAA").rawValue,0)
+        assert("", isLevel: .None)
+        assert("B", isLevel: .None)
+        assert("AAAAA", isLevel: .None)
         
+    }
+    
+    func assert(_ stationConfig: String, isLevel level: Level){
+        
+        print(stationConfig, level, level.rawValue)
+        XCTAssertEqual(calculatePoints(stationConfig),level)
     }
 
 }

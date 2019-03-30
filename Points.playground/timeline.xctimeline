@@ -3,7 +3,7 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///var/apache/aaab/admiralslog.test/Points.playground#CharacterRangeLen=1011&amp;CharacterRangeLoc=426&amp;EndingColumnNumber=5&amp;EndingLineNumber=66&amp;StartingColumnNumber=63&amp;StartingLineNumber=24&amp;Timestamp=575647661.61856"
+         documentLocation = "file:///var/apache/aaab/admiralslog.test/Points.playground#CharacterRangeLen=1191&amp;CharacterRangeLoc=258&amp;EndingColumnNumber=1&amp;EndingLineNumber=69&amp;StartingColumnNumber=0&amp;StartingLineNumber=20&amp;Timestamp=575650802.249861"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

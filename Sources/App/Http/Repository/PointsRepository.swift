@@ -34,7 +34,7 @@ class PointsRepository {
             
             guard let previousCount = d[letter] else {
                 d[letter] = 1
-                maximumDuplicateCount = 1
+                if(maximumDuplicateCount == 0){ maximumDuplicateCount = 1 }
                 return d
             }
             
