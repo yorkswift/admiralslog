@@ -55,8 +55,6 @@ func calculatePoints(_ initials:String) -> Level {
         if let _ = duplicates.values.first(where: { (count) -> Bool in
             return count != 2
         }){
-            
-            
             return .OnePair
         }
         
