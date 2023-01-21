@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Run",
+            "program": "${workspaceFolder:admiralslog}/.build/debug/Run",
+            "args": [],
+            "cwd": "${workspaceFolder:admiralslog}",
+            "preLaunchTask": "swift: Build Debug Run"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Run",
+            "program": "${workspaceFolder:admiralslog}/.build/release/Run",
+            "args": [],
+            "cwd": "${workspaceFolder:admiralslog}",
+            "preLaunchTask": "swift: Build Release Run"
+        }
+    ]
+}
